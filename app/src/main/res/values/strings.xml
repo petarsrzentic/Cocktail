@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">CockTail</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cocktail_fragment">Cocktails</string>
+    <string name="favorite_fragment">Favorites </string>
+    <string name="cocktail_type">Cocktail Type</string>
+    <string name="apply">Apply</string>
+    <string name="popular">Popular</string>
+    <string name="latest">Latest</string>
+    <string name="alcoholic">Alcoholic</string>
+    <string name="ordinary">Ordinary</string>
+    <string name="glass">Glass</string>
+    <string name="random">Random</string>
+    <string name="recent">Recent</string>
+</resources>
