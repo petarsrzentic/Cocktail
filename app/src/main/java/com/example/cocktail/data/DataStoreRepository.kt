@@ -5,6 +5,7 @@ import androidx.datastore.core.DataStore
 import androidx.datastore.preferences.core.*
 import androidx.datastore.preferences.preferencesDataStore
 import com.example.cocktail.util.Constants.Companion.DEFAULT_COCKTAIL
+import com.example.cocktail.util.Constants.Companion.PREFERENCES_BACK_ONLINE
 import com.example.cocktail.util.Constants.Companion.PREFERENCES_COCKTAIL_TYPE
 import com.example.cocktail.util.Constants.Companion.PREFERENCES_COCKTAIL_TYPE_ID
 import com.example.cocktail.util.Constants.Companion.PREFERENCE_NAME
@@ -24,6 +25,7 @@ class DataStoreRepository @Inject constructor(@ApplicationContext private val co
     private object PreferenceKeys {
         val selectedCocktailType = stringPreferencesKey(PREFERENCES_COCKTAIL_TYPE)
         val selectedCocktailTypeId = intPreferencesKey(PREFERENCES_COCKTAIL_TYPE_ID)
+        val backOnline = booleanPreferencesKey(PREFERENCES_BACK_ONLINE)
     }
 
     private val dataStore: DataStore<Preferences> = context.dataStore
@@ -32,6 +34,12 @@ class DataStoreRepository @Inject constructor(@ApplicationContext private val co
         dataStore.edit { preferences ->
             preferences[PreferenceKeys.selectedCocktailType] = cocktailType
             preferences[PreferenceKeys.selectedCocktailTypeId] = cocktailTypeId
+        }
+    }
+
+    suspend fun saveBackOnline(backOnline: Boolean) {
+        dataStore.edit {preferences ->
+            preferences[PreferenceKeys.backOnline] = backOnline
         }
     }
 
@@ -51,6 +59,19 @@ class DataStoreRepository @Inject constructor(@ApplicationContext private val co
                 selectedCocktailType,
                 selectedCocktailTypeId
             )
+        }
+
+    val readBackOnline: Flow<Boolean> = dataStore.data
+        .catch { exception ->
+            if (exception is IOException) {
+                emit(emptyPreferences())
+            } else {
+                throw exception
+            }
+        }
+        .map {preferences ->
+            val backOnline =  preferences[PreferenceKeys.backOnline] ?: false
+            backOnline
         }
 }
 

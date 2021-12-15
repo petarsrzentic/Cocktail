@@ -31,19 +31,19 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="SpeakableTextPresentCheck" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/cocktail_fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="24dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:src="@drawable/ic_liquor"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:tint="@color/white"
-            tools:ignore="SpeakableTextPresentCheck" />
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/cocktail_fab"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginEnd="24dp"-->
+<!--            android:layout_marginBottom="24dp"-->
+<!--            android:clickable="true"-->
+<!--            android:focusable="true"-->
+<!--            android:src="@drawable/ic_liquor"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:tint="@color/white"-->
+<!--            tools:ignore="SpeakableTextPresentCheck" />-->
 
         <ImageView
             android:id="@+id/error_imageView"
@@ -59,7 +59,8 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.37" />
+            app:layout_constraintVertical_bias="0.37"
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/error_textView"
@@ -67,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:alpha="0.5"
-            android:text="No Internet Connection"
+            android:text="@string/no_internet_connection"
             readApiResponse2="@{mainViewModel.cocktailResponse}"
             readDatabase2="@{mainViewModel.readCocktails}"
             android:textSize="18sp"
