@@ -1,8 +1,12 @@
 package com.example.cocktail.models
 
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
+import kotlinx.parcelize.RawValue
 
+@Parcelize
 data class Drink(
     @SerializedName("idDrink")
     val idDrink: String,
@@ -18,70 +22,38 @@ data class Drink(
     val strImageSource: String,
     @SerializedName("strIngredient1")
     val strIngredient1: String,
-    @SerializedName("strIngredient10")
-    val strIngredient10: Any,
-    @SerializedName("strIngredient11")
-    val strIngredient11: Any,
-    @SerializedName("strIngredient12")
-    val strIngredient12: Any,
-    @SerializedName("strIngredient13")
-    val strIngredient13: Any,
-    @SerializedName("strIngredient14")
-    val strIngredient14: Any,
-    @SerializedName("strIngredient15")
-    val strIngredient15: Any,
     @SerializedName("strIngredient2")
     val strIngredient2: String,
     @SerializedName("strIngredient3")
     val strIngredient3: String,
     @SerializedName("strIngredient4")
-    val strIngredient4: String,
+    val strIngredient4: String? = null,
     @SerializedName("strIngredient5")
-    val strIngredient5: String,
+    val strIngredient5: String? = null,
     @SerializedName("strIngredient6")
-    val strIngredient6: String,
+    val strIngredient6: String? = null,
     @SerializedName("strIngredient7")
-    val strIngredient7: String,
-    @SerializedName("strIngredient8")
-    val strIngredient8: Any,
-    @SerializedName("strIngredient9")
-    val strIngredient9: Any,
+    val strIngredient7: String? = null,
     @SerializedName("strInstructions")
     val strInstructions: String,
     @SerializedName("strInstructionsDE")
-    val strInstructionsDE: Any,
+    val strInstructionsDE: @RawValue Any,
     @SerializedName("strInstructionsIT")
-    val strInstructionsIT: Any,
+    val strInstructionsIT: @RawValue Any,
     @SerializedName("strMeasure1")
     val strMeasure1: String,
-    @SerializedName("strMeasure10")
-    val strMeasure10: Any,
-    @SerializedName("strMeasure11")
-    val strMeasure11: Any,
-    @SerializedName("strMeasure12")
-    val strMeasure12: Any,
-    @SerializedName("strMeasure13")
-    val strMeasure13: Any,
-    @SerializedName("strMeasure14")
-    val strMeasure14: Any,
-    @SerializedName("strMeasure15")
-    val strMeasure15: Any,
     @SerializedName("strMeasure2")
     val strMeasure2: String,
     @SerializedName("strMeasure3")
     val strMeasure3: String,
     @SerializedName("strMeasure4")
-    val strMeasure4: String,
+    val strMeasure4: String? = null,
     @SerializedName("strMeasure5")
-    val strMeasure5: String,
+    val strMeasure5: String? = null,
     @SerializedName("strMeasure6")
-    val strMeasure6: String,
+    val strMeasure6: String? = null,
     @SerializedName("strMeasure7")
-    val strMeasure7: String,
-    @SerializedName("strMeasure8")
-    val strMeasure8: Any,
-    @SerializedName("strMeasure9")
-    val strMeasure9: Any,
+    val strMeasure7: String? = null,
     @SerializedName("strTags")
     val strTags: String,
-)
+) : Parcelable

@@ -17,6 +17,9 @@
             android:name="backFromBottomSheet"
             app:argType="boolean"
             android:defaultValue="false" />
+        <action
+            android:id="@+id/action_cocktailFragment_to_details"
+            app:destination="@id/details" />
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
@@ -32,4 +35,13 @@
             android:id="@+id/action_cocktailBottomSheet_to_cocktailFragment"
             app:destination="@id/cocktailFragment" />
     </dialog>
+    <activity
+        android:id="@+id/details"
+        android:name="com.example.cocktail.ui.DetailsActivity"
+        android:label="Details"
+        tools:layout="@layout/activity_details">
+        <argument
+            android:name="result"
+            app:argType="com.example.cocktail.models.Drink" />
+    </activity>
 </navigation>
