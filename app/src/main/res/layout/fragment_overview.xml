@@ -4,70 +4,218 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightGray"
     tools:context=".ui.fragments.overview.OverviewFragment">
 
-
-    <ImageView
-        android:id="@+id/main_imageView"
-        android:layout_width="0dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:scaleType="centerCrop"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="10dp"
+        android:background="@color/lightGray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <View
-        android:id="@+id/gradient_overlay"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:background="@drawable/gradient_overlay"
-        app:layout_constraintBottom_toBottomOf="@+id/main_imageView"
-        app:layout_constraintEnd_toEndOf="@+id/main_imageView"
-        app:layout_constraintStart_toStartOf="@+id/main_imageView"
-        app:layout_constraintTop_toTopOf="@+id/main_imageView"
-        app:layout_constraintVertical_bias="1.0" />
+        <ImageView
+            android:id="@+id/main_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars"
+            android:contentDescription="@string/image_of_cocktail"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <View
+                android:id="@+id/view_transition"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:background="@drawable/gradient_overlay"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/title_textview"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="12dp"
-        android:layout_marginBottom="12dp"
         android:fontFamily="@font/courgette"
         android:text="@string/title"
         android:textColor="@color/darkGray"
-        android:textSize="22sp"
+        android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/summary_scrollView"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/card_view" />
 
-    <ScrollView
-        android:id="@+id/summary_scrollView"
-        android:layout_width="0dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_ingredients"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="12dp"
+        android:background="@color/lightGray"
+        app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/title_textview">
 
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/summery_textView"
-                android:layout_width="match_parent"
+                android:id="@+id/textView_ingredients"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
-                android:text="@string/textview" />
-        </LinearLayout>
-    </ScrollView>
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/courgette"
+                android:text="@string/ingredients_"
+                android:textColor="@color/darkGray"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/Ingredient1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/ingredient1"
+                app:layout_constraintStart_toStartOf="@+id/textView_ingredients"
+                app:layout_constraintTop_toBottomOf="@+id/textView_ingredients" />
+
+            <TextView
+                android:id="@+id/Ingredient2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/ingredient2"
+                app:layout_constraintStart_toStartOf="@+id/Ingredient1"
+                app:layout_constraintTop_toBottomOf="@+id/Ingredient1" />
+
+            <TextView
+                android:id="@+id/Ingredient3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:text="@string/ingredient3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/Ingredient2"
+                app:layout_constraintTop_toBottomOf="@+id/Ingredient2" />
+
+            <TextView
+                android:id="@+id/Ingredient4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:text="@string/ingredient4"
+                app:layout_constraintStart_toEndOf="@+id/Ingredient1"
+                app:layout_constraintTop_toTopOf="@+id/Ingredient1" />
+
+            <TextView
+                android:id="@+id/Ingredient5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/ingredient5"
+                app:layout_constraintStart_toStartOf="@+id/Ingredient4"
+                app:layout_constraintTop_toBottomOf="@+id/Ingredient4" />
+
+            <TextView
+                android:id="@+id/Ingredient6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@string/ingredient6"
+                app:layout_constraintStart_toStartOf="@+id/Ingredient5"
+                app:layout_constraintTop_toBottomOf="@+id/Ingredient5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView_ingredients">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textView_instructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/courgette"
+                android:text="@string/instructions_"
+                android:textColor="@color/darkGray"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:id="@+id/summary_scrollView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView_instructions">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/summery_textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/textview"
+                        android:textColor="@color/darkGray"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

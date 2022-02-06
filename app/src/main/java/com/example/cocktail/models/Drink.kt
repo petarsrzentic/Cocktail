@@ -27,13 +27,11 @@ data class Drink(
     @SerializedName("strIngredient3")
     val strIngredient3: String,
     @SerializedName("strIngredient4")
-    val strIngredient4: String? = null,
+    val strIngredient4: String? = null ,
     @SerializedName("strIngredient5")
     val strIngredient5: String? = null,
     @SerializedName("strIngredient6")
     val strIngredient6: String? = null,
-    @SerializedName("strIngredient7")
-    val strIngredient7: String? = null,
     @SerializedName("strInstructions")
     val strInstructions: String,
     @SerializedName("strInstructionsDE")
@@ -52,8 +50,6 @@ data class Drink(
     val strMeasure5: String? = null,
     @SerializedName("strMeasure6")
     val strMeasure6: String? = null,
-    @SerializedName("strMeasure7")
-    val strMeasure7: String? = null,
     @SerializedName("strTags")
     val strTags: String,
 ) : Parcelable
