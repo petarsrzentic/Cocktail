@@ -56,9 +56,9 @@ class CocktailFragment : Fragment(), SearchView.OnQueryTextListener {
 
        setHasOptionsMenu(true)
 
-        cocktailViewModel.readBackOnline.observe(viewLifecycleOwner, {
+        cocktailViewModel.readBackOnline.observe(viewLifecycleOwner) {
             cocktailViewModel.backOnline = it
-        })
+        }
 
         lifecycleScope.launch {
             networkListener = NetworkListener()
@@ -103,21 +103,21 @@ class CocktailFragment : Fragment(), SearchView.OnQueryTextListener {
     private fun readDatabase() {
         lifecycleScope.launch {
             // calling observeOnce from MyExtensionFunction
-            mainViewModel.readCocktails.observeOnce(viewLifecycleOwner, {database ->
+            mainViewModel.readCocktails.observeOnce(viewLifecycleOwner) { database ->
                 if (database.isNotEmpty() && !args.backFromBottomSheet) {
                     mAdapter.setData(database[0].cocktails)
                     hideShimmerEffect()
                 } else {
                     requestApiData()
                 }
-            })
+            }
         }
     }
 
     private fun requestApiData() {
         mainViewModel.getCocktails(cocktailViewModel.applyQueries())
-        mainViewModel.cocktailResponse.observe(viewLifecycleOwner, {response ->
-            when(response) {
+        mainViewModel.cocktailResponse.observe(viewLifecycleOwner) { response ->
+            when (response) {
                 is NetworkResult.Success -> {
                     hideShimmerEffect()
                     response.data?.let { mAdapter.setData(it) }
@@ -136,18 +136,16 @@ class CocktailFragment : Fragment(), SearchView.OnQueryTextListener {
                 }
             }
 
-        })
+        }
     }
-
-
 
     private fun loadDataFromCash() {
         lifecycleScope.launch {
-            mainViewModel.readCocktails.observe(viewLifecycleOwner, {database ->
+            mainViewModel.readCocktails.observe(viewLifecycleOwner) { database ->
                 if (database.isNotEmpty()) {
                     mAdapter.setData(database[0].cocktails)
                 }
-            })
+            }
         }
     }
 

@@ -37,6 +37,7 @@ class OverviewFragment : Fragment() {
         listOfIngredients.add(myBundle?.strIngredient5)
         listOfIngredients.add(myBundle?.strIngredient6)
 
+
         binding.Ingredient1.text = listOfIngredients[0] ?: ""
         binding.Ingredient2.text = listOfIngredients[1] ?: ""
         binding.Ingredient3.text = listOfIngredients[2] ?: ""
@@ -52,6 +53,31 @@ class OverviewFragment : Fragment() {
         listOfMeasure.add(myBundle?.strMeasure5)
         listOfMeasure.add(myBundle?.strMeasure6)
 
+        binding.textViewMeasure1.text = listOfMeasure[0] ?: ""
+        binding.textViewMeasure2.text = listOfMeasure[1] ?: ""
+        binding.textViewMeasure3.text = listOfMeasure[2] ?: ""
+        binding.textViewMeasure4.text = listOfMeasure[3] ?: ""
+        binding.textViewMeasure5.text = listOfMeasure[4] ?: ""
+        binding.textViewMeasure6.text = listOfMeasure[5] ?: ""
+
+        if (binding.Ingredient1.text != null){
+            binding.textViewColon1.visibility = View.VISIBLE
+        }
+        if (binding.Ingredient2.text != null){
+            binding.textViewColon2.visibility = View.VISIBLE
+        }
+        if (binding.Ingredient3.text != null){
+            binding.textViewColon3.visibility = View.VISIBLE
+        }
+        if (binding.Ingredient4.text != null){
+            binding.textViewColon4.visibility = View.VISIBLE
+        }
+        if (binding.Ingredient5.text != null){
+            binding.textViewColon5.visibility = View.VISIBLE
+        }
+        if (binding.Ingredient6.text != null){
+            binding.textViewColon6.visibility = View.VISIBLE
+        }
 
         return binding.root
     }

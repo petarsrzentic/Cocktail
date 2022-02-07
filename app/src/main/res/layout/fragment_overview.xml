@@ -12,10 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
         android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
         app:cardCornerRadius="10dp"
-        android:background="@color/lightGray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,16 +23,17 @@
             android:id="@+id/main_imageView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:contentDescription="@string/image_of_cocktail"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars"
-            android:contentDescription="@string/image_of_cocktail"/>
+            tools:src="@tools:sample/avatars" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <View
                 android:id="@+id/view_transition"
                 android:layout_width="wrap_content"
@@ -62,13 +62,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_view" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ScrollView>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_ingredients"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
         android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
         android:background="@color/lightGray"
         app:cardCornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,7 +89,7 @@
                 android:id="@+id/textView_ingredients"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/courgette"
                 android:text="@string/ingredients_"
@@ -97,58 +103,216 @@
                 android:id="@+id/Ingredient1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:textSize="16sp"
                 android:layout_marginTop="12dp"
                 android:text="@string/ingredient1"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/darkGray"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/textView_ingredients"
                 app:layout_constraintTop_toBottomOf="@+id/textView_ingredients" />
+
+            <TextView
+                android:id="@+id/textView_colon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text=": "
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/Ingredient1"
+                app:layout_constraintStart_toEndOf="@+id/Ingredient1"
+                app:layout_constraintTop_toTopOf="@+id/Ingredient1" />
+
+            <TextView
+                android:id="@+id/textView_measure1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/measure1"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="@+id/Ingredient1"
+                app:layout_constraintStart_toEndOf="@+id/textView_colon1"
+                app:layout_constraintTop_toTopOf="@+id/Ingredient1" />
 
             <TextView
                 android:id="@+id/Ingredient2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/ingredient2"
+                android:textSize="16sp"
+                android:textColor="@color/darkGray"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/Ingredient1"
                 app:layout_constraintTop_toBottomOf="@+id/Ingredient1" />
+
+            <TextView
+                android:id="@+id/textView_colon2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": "
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/Ingredient2"
+                app:layout_constraintStart_toEndOf="@+id/Ingredient2"
+                app:layout_constraintTop_toTopOf="@+id/Ingredient2" />
+
+            <TextView
+                android:id="@+id/textView_measure2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/measure2"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="@+id/Ingredient2"
+                app:layout_constraintStart_toEndOf="@+id/textView_colon2"
+                app:layout_constraintTop_toTopOf="@+id/Ingredient2" />
 
             <TextView
                 android:id="@+id/Ingredient3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="12dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/ingredient3"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="@color/darkGray"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/Ingredient2"
                 app:layout_constraintTop_toBottomOf="@+id/Ingredient2" />
+
+            <TextView
+                android:id="@+id/textView_colon3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=": "
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/Ingredient3"
+                app:layout_constraintStart_toEndOf="@+id/Ingredient3"
+                app:layout_constraintTop_toTopOf="@+id/Ingredient3" />
+
+            <TextView
+                android:id="@+id/textView_measure3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/measure3"
+                android:textStyle="italic"
+                app:layout_constraintBottom_toBottomOf="@+id/Ingredient3"
+                app:layout_constraintStart_toEndOf="@+id/textView_colon3"
+                app:layout_constraintTop_toTopOf="@+id/Ingredient3" />
 
             <TextView
                 android:id="@+id/Ingredient4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="48dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/ingredient4"
-                app:layout_constraintStart_toEndOf="@+id/Ingredient1"
-                app:layout_constraintTop_toTopOf="@+id/Ingredient1" />
+                android:textColor="@color/darkGray"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/Ingredient3"
+                app:layout_constraintTop_toBottomOf="@+id/Ingredient3" />
+
+            <TextView
+                android:id="@+id/textView_colon4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text=": "
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/Ingredient4"
+                app:layout_constraintStart_toEndOf="@+id/Ingredient4"
+                app:layout_constraintTop_toTopOf="@+id/Ingredient4" />
+
+            <TextView
+                android:id="@+id/textView_measure4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/measure4"
+                android:textStyle="italic"
+                android:ellipsize="end"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toBottomOf="@+id/Ingredient4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView_colon4"
+                app:layout_constraintTop_toTopOf="@+id/Ingredient4"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/Ingredient5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 android:text="@string/ingredient5"
+                android:textColor="@color/darkGray"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/Ingredient4"
                 app:layout_constraintTop_toBottomOf="@+id/Ingredient4" />
+
+            <TextView
+                android:id="@+id/textView_colon5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text=": "
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/Ingredient5"
+                app:layout_constraintStart_toEndOf="@+id/Ingredient5"
+                app:layout_constraintTop_toTopOf="@+id/Ingredient5" />
+
+            <TextView
+                android:id="@+id/textView_measure5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:inputType="textMultiLine"
+                android:text="@string/measure5"
+                android:textStyle="italic"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toBottomOf="@+id/Ingredient5"
+                app:layout_constraintEnd_toEndOf="@+id/textView_measure4"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView_colon5"
+                app:layout_constraintTop_toTopOf="@+id/Ingredient5"
+                app:layout_constraintVertical_bias="0.0" />
 
             <TextView
                 android:id="@+id/Ingredient6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:text="@string/ingredient6"
+                android:textColor="@color/darkGray"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/Ingredient5"
                 app:layout_constraintTop_toBottomOf="@+id/Ingredient5" />
+
+            <TextView
+                android:id="@+id/textView_colon6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:text=": "
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/Ingredient6"
+                app:layout_constraintStart_toEndOf="@+id/Ingredient6"
+                app:layout_constraintTop_toTopOf="@+id/Ingredient6" />
+
+            <TextView
+                android:id="@+id/textView_measure6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:inputType="textMultiLine"
+                android:text="@string/measure6"
+                android:textStyle="italic"
+                app:autoSizeTextType="uniform"
+                app:layout_constraintBottom_toBottomOf="@+id/Ingredient6"
+                app:layout_constraintEnd_toEndOf="@+id/textView_measure5"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView_colon6"
+                app:layout_constraintTop_toTopOf="@+id/Ingredient6"
+                app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -158,8 +322,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
         android:layout_marginBottom="12dp"
         app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -169,17 +333,17 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView_instructions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
                 android:fontFamily="@font/courgette"
                 android:text="@string/instructions_"
                 android:textColor="@color/darkGray"
-                android:layout_marginTop="12dp"
-                android:layout_marginStart="12dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -189,8 +353,8 @@
                 android:id="@+id/summary_scrollView"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginTop="12dp"
                 android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
                 android:layout_marginEnd="12dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -213,7 +377,6 @@
                 </LinearLayout>
             </ScrollView>
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
     </androidx.cardview.widget.CardView>

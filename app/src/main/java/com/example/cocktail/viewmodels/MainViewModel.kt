@@ -6,7 +6,8 @@ import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import androidx.lifecycle.*
 import com.example.cocktail.data.Repository
-import com.example.cocktail.data.database.CocktailEntity
+import com.example.cocktail.data.database.entities.CocktailEntity
+import com.example.cocktail.data.database.entities.FavoritesEntity
 import com.example.cocktail.models.Cocktails
 import com.example.cocktail.util.NetworkResult
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -24,11 +25,27 @@ class MainViewModel @Inject constructor(
 ) : AndroidViewModel(application) {
 
     /* Room Database*/
-    var readCocktails: LiveData<List<CocktailEntity>> = repository.local.readDatabase().asLiveData()
+    var readCocktails: LiveData<List<CocktailEntity>> = repository.local.readCocktails().asLiveData()
+    var readFavoriteCocktail: LiveData<List<FavoritesEntity>> = repository.local.readFavoriteCocktail().asLiveData()
 
     private fun insertCocktails(cocktailEntity: CocktailEntity) =
         viewModelScope.launch(Dispatchers.IO) {
             repository.local.insertCocktail(cocktailEntity)
+        }
+
+    private fun insertFavoriteCocktail(favoritesEntity: FavoritesEntity) =
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.local.deleteFavoriteCocktail(favoritesEntity)
+        }
+
+    private fun deleteFavoriteCocktail(favoritesEntity: FavoritesEntity) =
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.local.insertFavoriteCocktail(favoritesEntity)
+        }
+
+    private fun deleteAllFavoriteCocktail() =
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.local.deleteAllFavoriteCocktail()
         }
 
     /* Retrofit */

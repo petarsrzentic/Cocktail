@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.BindingAdapter
 import androidx.navigation.findNavController
-import com.example.cocktail.data.database.CocktailEntity
+import com.example.cocktail.data.database.entities.CocktailEntity
 import com.example.cocktail.models.Cocktails
 import com.example.cocktail.models.Drink
 import com.example.cocktail.ui.fragments.cocktail.CocktailFragmentDirections

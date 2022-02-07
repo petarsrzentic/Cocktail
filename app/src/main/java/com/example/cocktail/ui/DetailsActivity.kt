@@ -1,10 +1,12 @@
 package com.example.cocktail.ui
 
 import android.os.Bundle
+import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.navArgs
+import com.example.cocktail.R
 import com.example.cocktail.adapters.PagerAdapter
 import com.example.cocktail.databinding.ActivityDetailsBinding
 import com.example.cocktail.ui.fragments.overview.OverviewFragment
@@ -39,6 +41,11 @@ class DetailsActivity : AppCompatActivity() {
         )
 
         binding.viewPager.adapter = adapter
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.details_menu, menu)
+        return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
