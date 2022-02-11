@@ -25,7 +25,7 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class CocktailFragment : Fragment(), SearchView.OnQueryTextListener {
 
-    private val args by navArgs<CocktailFragmentArgs>()
+//    private val args by navArgs<CocktailFragmentArgs>()
 
     private var _binding : FragmentCocktailBinding? = null
     private val binding get() = _binding!!
@@ -70,11 +70,6 @@ class CocktailFragment : Fragment(), SearchView.OnQueryTextListener {
                 }
         }
 
-
-//        binding.cocktailFab.setOnClickListener {
-//            findNavController().navigate(R.id.action_cocktailFragment_to_cocktailBottomSheet)
-//        }
-
         return binding.root
     }
 
@@ -104,7 +99,7 @@ class CocktailFragment : Fragment(), SearchView.OnQueryTextListener {
         lifecycleScope.launch {
             // calling observeOnce from MyExtensionFunction
             mainViewModel.readCocktails.observeOnce(viewLifecycleOwner) { database ->
-                if (database.isNotEmpty() && !args.backFromBottomSheet) {
+                if (database.isNotEmpty()) {
                     mAdapter.setData(database[0].cocktails)
                     hideShimmerEffect()
                 } else {

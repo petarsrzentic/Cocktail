@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.asLiveData
-import androidx.navigation.fragment.findNavController
 import com.example.cocktail.databinding.FragmentCocktailBottomSheetBinding
 import com.example.cocktail.util.Constants.Companion.DEFAULT_COCKTAIL
 import com.example.cocktail.viewmodels.CocktailViewModel
@@ -18,7 +17,7 @@ import java.util.*
 
 class CocktailBottomSheet : BottomSheetDialogFragment() {
 
-    private var _binding : FragmentCocktailBottomSheetBinding? = null
+    private var _binding: FragmentCocktailBottomSheetBinding? = null
     private val binding get() = _binding!!
     private lateinit var cocktailViewModel: CocktailViewModel
     private var cocktailTypeChip = DEFAULT_COCKTAIL
@@ -36,10 +35,10 @@ class CocktailBottomSheet : BottomSheetDialogFragment() {
         // Inflate the layout for this fragment
         _binding = FragmentCocktailBottomSheetBinding.inflate(layoutInflater, container, false)
 
-        cocktailViewModel.readCocktailType.asLiveData().observe(viewLifecycleOwner, {value ->
+        cocktailViewModel.readCocktailType.asLiveData().observe(viewLifecycleOwner) { value ->
             cocktailTypeChip = value.selectedCocktail
             updateChip(value.selectedCocktailId, binding.chipGroup)
-        })
+        }
 
         binding.chipGroup.setOnCheckedChangeListener { group, checkedId ->
             val chip = group.findViewById<Chip>(checkedId)
@@ -53,9 +52,7 @@ class CocktailBottomSheet : BottomSheetDialogFragment() {
                 cocktailTypeChip,
                 cocktailTypeChipId
             )
-            val action =
-                CocktailBottomSheetDirections.actionCocktailBottomSheetToCocktailFragment(true)
-            findNavController().navigate(action)
+// 
         }
 
         return binding.root

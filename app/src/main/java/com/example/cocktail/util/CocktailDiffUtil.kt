@@ -1,11 +1,10 @@
 package com.example.cocktail.util
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.cocktail.models.Drink
 
-class CocktailDiffUtil(
-    private val oldList: List<Drink>,
-    private val newList: List<Drink>
+class CocktailDiffUtil<T>(
+    private val oldList: List<T>,
+    private val newList: List<T>
 ): DiffUtil.Callback() {
     override fun getOldListSize(): Int {
         return oldList.size

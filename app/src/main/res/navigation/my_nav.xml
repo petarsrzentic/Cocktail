@@ -10,9 +10,6 @@
         android:name="com.example.cocktail.ui.fragments.cocktail.CocktailFragment"
         android:label="Cocktails"
         tools:layout="@layout/fragment_cocktail" >
-        <action
-            android:id="@+id/action_cocktailFragment_to_cocktailBottomSheet"
-            app:destination="@id/cocktailBottomSheet" />
         <argument
             android:name="backFromBottomSheet"
             app:argType="boolean"
@@ -26,15 +23,6 @@
         android:name="com.example.cocktail.ui.fragments.favorites.FavoriteFragment"
         android:label="Favorites"
         tools:layout="@layout/fragment_favorite" />
-    <dialog
-        android:id="@+id/cocktailBottomSheet"
-        android:name="com.example.cocktail.ui.fragments.cocktail.bottomsheet.CocktailBottomSheet"
-        android:label="fragment_cocktail_bottom_sheet"
-        tools:layout="@layout/fragment_cocktail_bottom_sheet" >
-        <action
-            android:id="@+id/action_cocktailBottomSheet_to_cocktailFragment"
-            app:destination="@id/cocktailFragment" />
-    </dialog>
     <activity
         android:id="@+id/details"
         android:name="com.example.cocktail.ui.DetailsActivity"

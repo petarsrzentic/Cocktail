@@ -16,7 +16,6 @@ import kotlinx.coroutines.launch
 import retrofit2.Response
 import javax.inject.Inject
 
-private lateinit var responseCocktail: Response<Cocktails>
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
@@ -25,22 +24,24 @@ class MainViewModel @Inject constructor(
 ) : AndroidViewModel(application) {
 
     /* Room Database*/
-    var readCocktails: LiveData<List<CocktailEntity>> = repository.local.readCocktails().asLiveData()
-    var readFavoriteCocktail: LiveData<List<FavoritesEntity>> = repository.local.readFavoriteCocktail().asLiveData()
+    var readCocktails: LiveData<List<CocktailEntity>> =
+        repository.local.readCocktails().asLiveData()
+    var readFavoriteCocktail: LiveData<List<FavoritesEntity>> =
+        repository.local.readFavoriteCocktail().asLiveData()
 
     private fun insertCocktails(cocktailEntity: CocktailEntity) =
         viewModelScope.launch(Dispatchers.IO) {
             repository.local.insertCocktail(cocktailEntity)
         }
 
-    private fun insertFavoriteCocktail(favoritesEntity: FavoritesEntity) =
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.local.deleteFavoriteCocktail(favoritesEntity)
-        }
-
-    private fun deleteFavoriteCocktail(favoritesEntity: FavoritesEntity) =
+    fun insertFavoriteCocktail(favoritesEntity: FavoritesEntity) =
         viewModelScope.launch(Dispatchers.IO) {
             repository.local.insertFavoriteCocktail(favoritesEntity)
+        }
+
+    fun deleteFavoriteCocktail(favoritesEntity: FavoritesEntity) =
+        viewModelScope.launch(Dispatchers.IO) {
+            repository.local.deleteFavoriteCocktail(favoritesEntity)
         }
 
     private fun deleteAllFavoriteCocktail() =
@@ -64,16 +65,6 @@ class MainViewModel @Inject constructor(
                 cocktailResponse.value = handleCocktailResponse(response)
 
                 /*Place for response*/
-                when (responseCocktail) {
-                    repository.remote.getCocktailPopular(queries) ->
-                        cocktailResponse.value = handleCocktailResponse(responseCocktail)
-                    repository.remote.getCocktailLatest(queries) ->
-                        cocktailResponse.value = handleCocktailResponse(responseCocktail)
-                    repository.remote.getCocktailsRecent(queries) ->
-                        cocktailResponse.value = handleCocktailResponse(responseCocktail)
-                    repository.remote.getCocktailsRandom(queries) ->
-                        cocktailResponse.value = handleCocktailResponse(responseCocktail)
-                }
 
                 val cocktails = cocktailResponse.value!!.data
                 if (cocktails != null) {
@@ -110,7 +101,7 @@ class MainViewModel @Inject constructor(
                 return NetworkResult.Success(cocktails!!)
             }
             else -> {
-                return NetworkResult.Error(response.message() )
+                return NetworkResult.Error(response.message())
             }
         }
     }

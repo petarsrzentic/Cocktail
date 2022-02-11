@@ -62,11 +62,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_view" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    </ScrollView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView_ingredients"
@@ -103,11 +98,11 @@
                 android:id="@+id/Ingredient1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="12dp"
                 android:text="@string/ingredient1"
-                android:layout_marginStart="12dp"
                 android:textColor="@color/darkGray"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/textView_ingredients"
                 app:layout_constraintTop_toBottomOf="@+id/textView_ingredients" />
@@ -139,8 +134,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/ingredient2"
-                android:textSize="16sp"
                 android:textColor="@color/darkGray"
+                android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/Ingredient1"
                 app:layout_constraintTop_toBottomOf="@+id/Ingredient1" />
@@ -224,9 +219,9 @@
                 android:id="@+id/textView_measure4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:ellipsize="end"
                 android:text="@string/measure4"
                 android:textStyle="italic"
-                android:ellipsize="end"
                 app:autoSizeTextType="uniform"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient4"
                 app:layout_constraintEnd_toEndOf="parent"
