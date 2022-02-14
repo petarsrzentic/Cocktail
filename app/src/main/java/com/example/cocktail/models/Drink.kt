@@ -18,8 +18,6 @@ data class Drink(
     val strDrinkThumb: String,
     @SerializedName("strGlass")
     val strGlass: String,
-    @SerializedName("strImageSource")
-    val strImageSource: String,
     @SerializedName("strIngredient1")
     val strIngredient1: String,
     @SerializedName("strIngredient2")
