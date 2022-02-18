@@ -4,13 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <item
-        android:id="@+id/search_menu"
-        android:icon="@drawable/ic_search"
-        android:iconTint="@color/darker"
-        android:title="@string/search"
-        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:id="@+id/delete_favorite_cocktail_menu"
+        android:icon="@drawable/ic_delete"
+        android:iconTint="@color/white"
+        android:title="@string/delete_favorite_menu"
         app:showAsAction="ifRoom"
         tools:targetApi="o" />
-
 
 </menu>

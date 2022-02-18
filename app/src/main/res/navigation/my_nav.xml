@@ -22,7 +22,11 @@
         android:id="@+id/favoriteFragment"
         android:name="com.example.cocktail.ui.fragments.favorites.FavoriteFragment"
         android:label="Favorites"
-        tools:layout="@layout/fragment_favorite" />
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_details"
+            app:destination="@id/details" />
+    </fragment>
     <activity
         android:id="@+id/details"
         android:name="com.example.cocktail.ui.DetailsActivity"

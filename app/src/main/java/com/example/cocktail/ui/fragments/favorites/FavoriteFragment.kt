@@ -18,8 +18,8 @@ class FavoriteFragment : Fragment() {
 
     private var _binding : FragmentFavoriteBinding? = null
     private val binding get() = _binding!!
-    private val mAdapter: FavoriteCocktailAdapter by lazy { FavoriteCocktailAdapter() }
     private val mainViewModel: MainViewModel by viewModels()
+    private val mAdapter: FavoriteCocktailAdapter by lazy { FavoriteCocktailAdapter(requireActivity(), mainViewModel) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,11 +28,14 @@ class FavoriteFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentFavoriteBinding.inflate(layoutInflater, container, false)
 
+        binding.lifecycleOwner = this
+        binding.mainViewModel = mainViewModel
+        binding.mAdapter = mAdapter
         setupRecycleView(binding.favoriteCocktailRecyclerView)
 
-        mainViewModel.readFavoriteCocktail.observe(viewLifecycleOwner) { favoriteEntity ->
-            mAdapter.setData(favoriteEntity)
-        }
+//        mainViewModel.readFavoriteCocktail.observe(viewLifecycleOwner) { favoriteEntity ->
+//            mAdapter.setData(favoriteEntity)
+//        }
 
         return binding.root
     }
@@ -45,5 +48,6 @@ class FavoriteFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+        mAdapter.closeContextualActionMode()
     }
 }
