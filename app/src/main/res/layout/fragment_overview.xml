@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
+    app:layoutDescription="@xml/fragment_overview_scene"
     tools:context=".ui.fragments.overview.OverviewFragment">
 
     <androidx.cardview.widget.CardView
@@ -112,8 +113,8 @@
                 android:id="@+id/textView_colon1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/colon"
                 android:layout_marginStart="2dp"
+                android:text="@string/colon"
                 android:textColor="@color/detailsActivityCardTextView"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient1"
@@ -148,8 +149,8 @@
                 android:id="@+id/textView_colon2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/colon"
                 android:layout_marginStart="2dp"
+                android:text="@string/colon"
                 android:textColor="@color/detailsActivityCardTextView"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient2"
@@ -160,8 +161,8 @@
                 android:id="@+id/textView_measure2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/measure2"
                 android:layout_marginStart="5dp"
+                android:text="@string/measure2"
                 android:textColor="@color/detailsActivityMeasureTextColor"
                 android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient2"
@@ -184,8 +185,8 @@
                 android:id="@+id/textView_colon3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/colon"
                 android:layout_marginStart="2dp"
+                android:text="@string/colon"
                 android:textColor="@color/detailsActivityCardTextView"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient3"
@@ -196,8 +197,8 @@
                 android:id="@+id/textView_measure3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/measure3"
                 android:layout_marginStart="5dp"
+                android:text="@string/measure3"
                 android:textColor="@color/detailsActivityMeasureTextColor"
                 android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient3"
@@ -232,9 +233,9 @@
                 android:id="@+id/textView_measure4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:ellipsize="end"
                 android:text="@string/measure4"
-                android:layout_marginStart="5dp"
                 android:textColor="@color/detailsActivityMeasureTextColor"
                 android:textStyle="italic"
                 app:autoSizeTextType="uniform"
@@ -273,10 +274,10 @@
                 android:id="@+id/textView_measure5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
                 android:ellipsize="end"
                 android:inputType="textMultiLine"
                 android:text="@string/measure5"
-                android:layout_marginStart="5dp"
                 android:textColor="@color/detailsActivityMeasureTextColor"
                 android:textStyle="italic"
                 app:autoSizeTextType="uniform"
@@ -286,7 +287,7 @@
                 app:layout_constraintStart_toEndOf="@+id/textView_colon5"
                 app:layout_constraintTop_toTopOf="@+id/Ingredient5"
                 app:layout_constraintVertical_bias="0.0"
-                tools:ignore="TextViewEdits" />
+                tools:ignore="TextViewEdits,TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/Ingredient6"
@@ -317,8 +318,8 @@
                 android:id="@+id/textView_measure6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:ellipsize="end"
                 android:layout_marginStart="5dp"
+                android:ellipsize="end"
                 android:inputType="textMultiLine"
                 android:text="@string/measure6"
                 android:textColor="@color/detailsActivityMeasureTextColor"
@@ -330,13 +331,14 @@
                 app:layout_constraintStart_toEndOf="@+id/textView_colon6"
                 app:layout_constraintTop_toTopOf="@+id/Ingredient6"
                 app:layout_constraintVertical_bias="0.0"
-                tools:ignore="TextViewEdits" />
+                tools:ignore="TextViewEdits,TouchTargetSizeCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="12dp"
@@ -404,4 +406,4 @@
 
     </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.motion.widget.MotionLayout>
