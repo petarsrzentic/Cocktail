@@ -1,17 +1,70 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="Theme.CockTail" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.CockTail" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="actionModeBackground">@color/contextualActionBarColor</item>
+        <item name="android:statusBarColor">@color/statusBarColor</item>
+        <item name="actionBarStyle">@style/CustomActionBarStyle</item>
+<!--        <item name="bottomNavigationStyle">@style/CustomBottomNavigationViewStyle</item>-->
+    </style>
+    
+    <style name="CustomActionBarStyle" parent="Widget.MaterialComponents.ActionBar.Primary">
+        <item name="background">@color/actionBarBackgroundColor</item>
     </style>
 
+    <color name="colorPrimary">#fcd24f</color>
+    <color name="colorPrimaryDark">#c6a116</color>
+    <color name="colorAccent">#ffff81</color>
 
-    <style name="customChipStyle" parent="Widget.MaterialComponents.Chip.Filter" >
-        <item name="chipBackgroundColor">@color/chip_background_color</item>
-        <item name="android:textColor">@color/chip_text_color</item>
-        <item name="chipIconTint">@color/chip_text_color</item>
-    </style>
+    <color name="secondaryColor">#fca64f</color>
+    <color name="secondaryLightColor">#ffd87e</color>
+    <color name="secondaryDarkColor">#c5771f</color>
+
+    <color name="primaryTextColor">@color/darker</color>
+    <color name="secondaryTextColor">#000000</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="lightGray">#F9F9F9</color>
+    <color name="mediumGray">#D1D1D1</color>
+    <color name="lightMediumGray">#80D1D1D1</color>
+    <color name="darkGray">#4B4B4B</color>
+    <color name="dark">#313C44</color>
+    <color name="darker">#151B20</color>
+    <color name="black">#000000</color>
+    <color name="red">#B7322B</color>
+    <color name="yellow">#FFC114</color>
+    <color name="green">#00C980</color>
+    
+    <color name="backgroundColor">@color/lightGray</color>
+    <color name="backgroundBottomColor">@color/colorPrimary</color>
+    <color name="bottomIconColor">@color/darker</color>
+    <color name="shadowColor">@color/colorPrimary</color>
+
+    // Custom CardView style
+    <color name="strokeColor">@color/lightMediumGray</color>
+    <color name="cardBackgroundColor">@color/white</color>
+    <color name="cardBackgroundLightColor">#10fcd24f</color>
+    <color name="titleColor">@color/darker</color>
+
+    <color name="statusBarColor">@color/colorPrimaryDark</color>
+    <color name="contextualStatusBarColor">@color/darker</color>
+    <color name="contextualActionBarColor">@color/dark</color>
+    <color name="actionBarBackgroundColor">@color/colorPrimary</color>
+
+    //BottomNavigationView
+    <color name="bottomNavBackground">@color/darkGray</color>
+    <color name="bottomNavItemColor">@color/darker</color>
+    <color name="bottomNavCheckedItemColor">@color/colorPrimaryDark</color>
+
+    <color name="placeHolderColor">@color/mediumGray</color>
+    <color name="placeHolderTitleColor">@color/darkGray</color>
+
+    //detailsActivity card
+    <color name="detailsActivityCard">@color/cardview_light_background</color>
+    <color name="detailsActivityCardTextView">@color/darkGray</color>
+    <color name="detailsActivityMeasureTextColor">@color/darker</color>
+
 </resources>

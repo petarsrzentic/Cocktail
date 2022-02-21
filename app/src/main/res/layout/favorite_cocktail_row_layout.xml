@@ -19,7 +19,7 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/rowCardView"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
             app:cardCornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -27,7 +27,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:strokeColor="@color/lightMediumGray"
+            app:strokeColor="@color/strokeColor"
             app:strokeWidth="1dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -42,6 +42,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
+                    android:contentDescription="@string/image_of_favorite_cocktail"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
@@ -62,7 +63,7 @@
                     android:maxLines="2"
                     android:paddingStart="5dp"
                     android:paddingEnd="5dp"
-                    android:shadowColor="@color/colorPrimary"
+                    android:shadowColor="@color/shadowColor"
                     android:shadowRadius="8"
                     android:text="@{favoritesEntity.drink.strDrink}"
                     android:textAlignment="textEnd"

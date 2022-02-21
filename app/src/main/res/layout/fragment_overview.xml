@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightGray"
+    android:background="@color/backgroundColor"
     tools:context=".ui.fragments.overview.OverviewFragment">
 
     <androidx.cardview.widget.CardView
@@ -54,7 +54,7 @@
         android:layout_marginEnd="12dp"
         android:fontFamily="@font/courgette"
         android:text="@string/title"
-        android:textColor="@color/darkGray"
+        android:textColor="@color/titleColor"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -78,7 +78,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:background="@color/detailsActivityCard">
 
             <TextView
                 android:id="@+id/textView_ingredients"
@@ -88,7 +89,7 @@
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/courgette"
                 android:text="@string/ingredients_"
-                android:textColor="@color/darkGray"
+                android:textColor="@color/detailsActivityCardTextView"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -101,7 +102,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="12dp"
                 android:text="@string/ingredient1"
-                android:textColor="@color/darkGray"
+                android:textColor="@color/detailsActivityCardTextView"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/textView_ingredients"
@@ -112,7 +113,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
-                android:text=": "
+                android:text="@string/colon"
+                android:textColor="@color/detailsActivityCardTextView"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient1"
                 app:layout_constraintStart_toEndOf="@+id/Ingredient1"
@@ -123,6 +125,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/measure1"
+                android:textColor="@color/detailsActivityMeasureTextColor"
                 android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient1"
                 app:layout_constraintStart_toEndOf="@+id/textView_colon1"
@@ -134,7 +137,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/ingredient2"
-                android:textColor="@color/darkGray"
+                android:textColor="@color/detailsActivityCardTextView"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/Ingredient1"
@@ -144,7 +147,8 @@
                 android:id="@+id/textView_colon2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=": "
+                android:text="@string/colon"
+                android:textColor="@color/detailsActivityCardTextView"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient2"
                 app:layout_constraintStart_toEndOf="@+id/Ingredient2"
@@ -155,6 +159,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/measure2"
+                android:textColor="@color/detailsActivityMeasureTextColor"
                 android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient2"
                 app:layout_constraintStart_toEndOf="@+id/textView_colon2"
@@ -166,7 +171,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/ingredient3"
-                android:textColor="@color/darkGray"
+                android:textColor="@color/detailsActivityCardTextView"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/Ingredient2"
@@ -176,7 +181,8 @@
                 android:id="@+id/textView_colon3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=": "
+                android:text="@string/colon"
+                android:textColor="@color/detailsActivityCardTextView"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient3"
                 app:layout_constraintStart_toEndOf="@+id/Ingredient3"
@@ -187,6 +193,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/measure3"
+                android:textColor="@color/detailsActivityMeasureTextColor"
                 android:textStyle="italic"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient3"
                 app:layout_constraintStart_toEndOf="@+id/textView_colon3"
@@ -198,7 +205,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/ingredient4"
-                android:textColor="@color/darkGray"
+                android:textColor="@color/detailsActivityCardTextView"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/Ingredient3"
@@ -209,7 +216,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
-                android:text=": "
+                android:text="@string/colon"
+                android:textColor="@color/detailsActivityCardTextView"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient4"
                 app:layout_constraintStart_toEndOf="@+id/Ingredient4"
@@ -221,6 +229,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:text="@string/measure4"
+                android:textColor="@color/detailsActivityMeasureTextColor"
                 android:textStyle="italic"
                 app:autoSizeTextType="uniform"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient4"
@@ -236,7 +245,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/ingredient5"
-                android:textColor="@color/darkGray"
+                android:textColor="@color/detailsActivityCardTextView"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/Ingredient4"
@@ -247,7 +256,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
-                android:text=": "
+                android:text="@string/colon"
+                android:textColor="@color/detailsActivityCardTextView"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient5"
                 app:layout_constraintStart_toEndOf="@+id/Ingredient5"
@@ -260,6 +270,7 @@
                 android:ellipsize="end"
                 android:inputType="textMultiLine"
                 android:text="@string/measure5"
+                android:textColor="@color/detailsActivityMeasureTextColor"
                 android:textStyle="italic"
                 app:autoSizeTextType="uniform"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient5"
@@ -267,7 +278,8 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/textView_colon5"
                 app:layout_constraintTop_toTopOf="@+id/Ingredient5"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="TextViewEdits" />
 
             <TextView
                 android:id="@+id/Ingredient6"
@@ -276,7 +288,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="@string/ingredient6"
-                android:textColor="@color/darkGray"
+                android:textColor="@color/detailsActivityCardTextView"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="@+id/Ingredient5"
@@ -287,7 +299,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
-                android:text=": "
+                android:text="@string/colon"
+                android:textColor="@color/detailsActivityCardTextView"
                 android:visibility="invisible"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient6"
                 app:layout_constraintStart_toEndOf="@+id/Ingredient6"
@@ -300,6 +313,7 @@
                 android:ellipsize="end"
                 android:inputType="textMultiLine"
                 android:text="@string/measure6"
+                android:textColor="@color/detailsActivityMeasureTextColor"
                 android:textStyle="italic"
                 app:autoSizeTextType="uniform"
                 app:layout_constraintBottom_toBottomOf="@+id/Ingredient6"
@@ -307,7 +321,8 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/textView_colon6"
                 app:layout_constraintTop_toTopOf="@+id/Ingredient6"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="TextViewEdits" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -328,7 +343,8 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@color/detailsActivityCard">
 
             <TextView
                 android:id="@+id/textView_instructions"
@@ -338,7 +354,7 @@
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/courgette"
                 android:text="@string/instructions_"
-                android:textColor="@color/darkGray"
+                android:textColor="@color/titleColor"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
@@ -367,7 +383,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/textview"
-                        android:textColor="@color/darkGray"
+                        android:textColor="@color/titleColor"
                         android:textSize="16sp" />
                 </LinearLayout>
             </ScrollView>

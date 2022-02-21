@@ -12,7 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/lightGray"
+        android:background="@color/backgroundColor"
         tools:context=".ui.fragments.cocktail.CocktailFragment">
 
         <com.todkars.shimmer.ShimmerRecyclerView
@@ -30,20 +30,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="SpeakableTextPresentCheck" />
-
-<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--            android:id="@+id/cocktail_fab"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginEnd="24dp"-->
-<!--            android:layout_marginBottom="24dp"-->
-<!--            android:clickable="true"-->
-<!--            android:focusable="true"-->
-<!--            android:src="@drawable/ic_liquor"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:tint="@color/white"-->
-<!--            tools:ignore="SpeakableTextPresentCheck" />-->
 
         <ImageView
             android:id="@+id/error_imageView"

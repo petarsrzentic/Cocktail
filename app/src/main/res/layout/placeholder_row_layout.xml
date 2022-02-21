@@ -11,7 +11,7 @@
         android:id="@+id/view"
         android:layout_width="wrap_content"
         android:layout_height="200dp"
-        android:background="@color/mediumGray"
+        android:background="@color/placeHolderColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -19,16 +19,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <View
-        android:id="@+id/view2"
-        android:layout_width="150dp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_text"
+        android:layout_width="160dp"
         android:layout_height="30dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="16dp"
-        android:padding="2dp"
-        android:background="#BFBFBF"
+        android:backgroundTint="@color/placeHolderTitleColor"
+        app:cardCornerRadius="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/view" />
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.84000003">
+
+    </androidx.cardview.widget.CardView>
+
 
     <ImageView
         android:id="@+id/imageView2"
@@ -41,7 +46,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.506"
         app:srcCompat="@drawable/ic_background_placeholder"
-        tools:ignore="ImageContrastCheck"
-        android:contentDescription="TODO" />
+        android:contentDescription="@string/image_of_mountains_when_there_is_no_data"
+        tools:ignore="ImageContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

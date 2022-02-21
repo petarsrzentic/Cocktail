@@ -60,22 +60,22 @@ class OverviewFragment : Fragment() {
         binding.textViewMeasure5.text = listOfMeasure[4] ?: ""
         binding.textViewMeasure6.text = listOfMeasure[5] ?: ""
 
-        if (binding.Ingredient1.text != null){
+        if (!binding.Ingredient1.text.isNullOrEmpty()){
             binding.textViewColon1.visibility = View.VISIBLE
         }
-        if (binding.Ingredient2.text != null){
+        if (!binding.Ingredient2.text.isNullOrEmpty()){
             binding.textViewColon2.visibility = View.VISIBLE
         }
-        if (binding.Ingredient3.text != null){
+        if (!binding.Ingredient3.text.isNullOrEmpty()){
             binding.textViewColon3.visibility = View.VISIBLE
         }
-        if (binding.Ingredient4.text != null){
+        if (!binding.Ingredient4.text.isNullOrEmpty()){
             binding.textViewColon4.visibility = View.VISIBLE
         }
-        if (binding.Ingredient5.text != null){
+        if (!binding.Ingredient5.text.isNullOrEmpty()){
             binding.textViewColon5.visibility = View.VISIBLE
         }
-        if (binding.Ingredient6.text != null){
+        if (!binding.Ingredient6.text.isNullOrEmpty()){
             binding.textViewColon6.visibility = View.VISIBLE
         }
 

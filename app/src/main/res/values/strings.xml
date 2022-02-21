@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string name="app_name">CockTail</string>
+    <string name="app_name">Cocktails</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="cocktail_fragment">Cocktails</string>
@@ -27,7 +27,6 @@
     <string name="ingredient5">Ingredient5</string>
     <string name="ingredient6">Ingredient6</string>
     <string name="instructions_">Instructions:</string>
-    <string name="image_of_cocktail">Image of cocktail</string>
     <string name="measure1" tools:ignore="Typos">measure1</string>
     <string name="measure2">measure2</string>
     <string name="measure3">measure3</string>
@@ -37,4 +36,9 @@
     <string name="save_to_favorites">Save to Favorites</string>
     <string name="no_favorite_cocktails">No Favorite Cocktails</string>
     <string name="delete_favorite_menu">Delete Favorite Menu</string>
+    <string name="image_of_cocktail_when_there_is_no_data">Image of cocktail when there is no data</string>
+    <string name="image_of_mountains_when_there_is_no_data">Image of mountains when there is no data</string>
+    <string name="image_of_favorite_cocktail">Image of favorite cocktail</string>
+    <string name="image_of_cocktail">Image of cocktail</string>
+    <string name="colon">:</string>
 </resources>

@@ -33,10 +33,6 @@ class FavoriteFragment : Fragment() {
         binding.mAdapter = mAdapter
         setupRecycleView(binding.favoriteCocktailRecyclerView)
 
-//        mainViewModel.readFavoriteCocktail.observe(viewLifecycleOwner) { favoriteEntity ->
-//            mAdapter.setData(favoriteEntity)
-//        }
-
         return binding.root
     }
 
