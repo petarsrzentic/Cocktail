@@ -33,9 +33,9 @@ data class Drink(
     @SerializedName("strInstructions")
     val strInstructions: String,
     @SerializedName("strInstructionsDE")
-    val strInstructionsDE: @RawValue Any,
+    val strInstructionsDE: String?,
     @SerializedName("strInstructionsIT")
-    val strInstructionsIT: @RawValue Any,
+    val strInstructionsIT: String?,
     @SerializedName("strMeasure1")
     val strMeasure1: String,
     @SerializedName("strMeasure2")

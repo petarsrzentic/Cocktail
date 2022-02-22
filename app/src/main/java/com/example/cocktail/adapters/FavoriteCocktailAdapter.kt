@@ -61,6 +61,8 @@ class FavoriteCocktailAdapter(
         val currentCocktail = favoriteCocktails[position]
         holder.bind(currentCocktail)
 
+        saveItemStateOnScroll(currentCocktail, holder)
+
         /* Single click listener */
         holder.itemView.setOnClickListener {
             if (multiSelection) {
@@ -80,10 +82,18 @@ class FavoriteCocktailAdapter(
                 applySelection(holder, currentCocktail)
                 true
             } else {
-                multiSelection = false
-                false
+                applySelection(holder, currentCocktail)
+                true
             }
 
+        }
+    }
+
+    private fun saveItemStateOnScroll(currentCocktail: FavoritesEntity, holder: MyViewHolder) {
+        if (selectedCocktails.contains(currentCocktail)) {
+            changeCocktailStyle(holder, R.color.cardBackgroundLightColor)
+        } else {
+            changeCocktailStyle(holder, R.color.cardBackgroundColor)
         }
     }
 
@@ -108,6 +118,7 @@ class FavoriteCocktailAdapter(
         when (selectedCocktails.size) {
             0 -> {
                 mActionMode.finish()
+                multiSelection = false
             }
             1 -> {
                 mActionMode.title = "${selectedCocktails.size} cocktail selected"

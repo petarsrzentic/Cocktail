@@ -25,8 +25,6 @@ import kotlinx.coroutines.launch
 @AndroidEntryPoint
 class CocktailFragment : Fragment(), SearchView.OnQueryTextListener {
 
-//    private val args by navArgs<CocktailFragmentArgs>()
-
     private var _binding : FragmentCocktailBinding? = null
     private val binding get() = _binding!!
 
@@ -60,7 +58,8 @@ class CocktailFragment : Fragment(), SearchView.OnQueryTextListener {
             cocktailViewModel.backOnline = it
         }
 
-        lifecycleScope.launch {
+        // using launchWhenStarted for fixing bug when navigate from one fragment to another and switch internet connection app crashes.
+        lifecycleScope.launchWhenStarted {
             networkListener = NetworkListener()
             networkListener.checkNetworkAvailability(requireContext())
                 .collect { status ->
