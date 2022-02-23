@@ -21,9 +21,9 @@ data class Drink(
     @SerializedName("strIngredient1")
     val strIngredient1: String,
     @SerializedName("strIngredient2")
-    val strIngredient2: String,
+    val strIngredient2: String?,
     @SerializedName("strIngredient3")
-    val strIngredient3: String,
+    val strIngredient3: String?,
     @SerializedName("strIngredient4")
     val strIngredient4: String?,
     @SerializedName("strIngredient5")
@@ -39,9 +39,9 @@ data class Drink(
     @SerializedName("strMeasure1")
     val strMeasure1: String,
     @SerializedName("strMeasure2")
-    val strMeasure2: String,
+    val strMeasure2: String?,
     @SerializedName("strMeasure3")
-    val strMeasure3: String,
+    val strMeasure3: String?,
     @SerializedName("strMeasure4")
     val strMeasure4: String?,
     @SerializedName("strMeasure5")

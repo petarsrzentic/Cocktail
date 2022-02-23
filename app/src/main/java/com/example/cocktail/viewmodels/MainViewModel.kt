@@ -51,17 +51,23 @@ class MainViewModel @Inject constructor(
 
     /* Retrofit */
     var cocktailResponse: MutableLiveData<NetworkResult<Cocktails>> = MutableLiveData()
+//    val searchCocktailResponse: MutableLiveData<NetworkResult<Cocktails>> = MutableLiveData()
 
     fun getCocktails(queries: Map<String, String>) = viewModelScope.launch {
         getCocktailsSafeCall(queries)
     }
+//
+//    fun getCocktailByName(searchQuery: Map<String, String>) = viewModelScope.launch {
+//        searchCocktailSafeCall(searchQuery)
+//    }
+
 
     private suspend fun getCocktailsSafeCall(queries: Map<String, String>) {
         cocktailResponse.value = NetworkResult.Loading()
 
         if (hasInternetConnection()) {
             try {
-                val response = repository.remote.getCocktailPopular(queries)
+                val response = repository.remote.getSearchCocktails(queries)
                 cocktailResponse.value = handleCocktailResponse(response)
 
                 /*Place for response*/
@@ -78,6 +84,24 @@ class MainViewModel @Inject constructor(
             cocktailResponse.value = NetworkResult.Error("No Internet Connection")
         }
     }
+//
+//    private suspend fun searchCocktailSafeCall(searchQuery: Map<String, String>) {
+//        searchCocktailResponse.value = NetworkResult.Loading()
+//
+//        if (hasInternetConnection()) {
+//            try {
+//                val response = repository.remote.getCocktailByName(searchQuery)
+//                searchCocktailResponse.value = handleCocktailResponse(response)
+//
+//                /*Place for response*/
+//
+//            } catch (e: Exception) {
+//                searchCocktailResponse.value = NetworkResult.Error("Cocktails not found!")
+//            }
+//        } else {
+//            searchCocktailResponse.value = NetworkResult.Error("No Internet Connection")
+//        }
+//    }
 
     private fun offlineCashCocktails(cocktails: Cocktails) {
         val cocktailEntity = CocktailEntity(cocktails)

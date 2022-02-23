@@ -7,9 +7,6 @@ import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.cocktail.data.DataStoreRepository
 import com.example.cocktail.util.Constants.Companion.DEFAULT_COCKTAIL
-import com.example.cocktail.util.Constants.Companion.QUERY_LATEST
-import com.example.cocktail.util.Constants.Companion.QUERY_RANDOM
-import com.example.cocktail.util.Constants.Companion.QUERY_RECENT
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
@@ -49,14 +46,15 @@ class CocktailViewModel @Inject constructor(
         }
 
         val queries: HashMap<String, String> = HashMap()
-        queries[DEFAULT_COCKTAIL] = cocktailType//"popular"
-        queries[QUERY_LATEST] = "latest"
-        queries[QUERY_RECENT] = "recent"
-        queries[QUERY_RANDOM] = "random"
+        queries[DEFAULT_COCKTAIL] = cocktailType//"search"
 
         return queries
 
     }
+
+//    fun applySearchQuery(searchQuery: String): HashMap<String, String> {
+//        val queries: HashMap<String, String> = HashMap()
+//    }
 
     fun showNetworkStatus() {
         if (!networkStatus) {

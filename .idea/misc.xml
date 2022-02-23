@@ -12,7 +12,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.165" />
         <entry key="app/src/main/res/layout/cocktail_row_layout.xml" value="0.2" />
         <entry key="app/src/main/res/layout/favorite_cocktail_row_layout.xml" value="0.19081272084805653" />
-        <entry key="app/src/main/res/layout/fragment_cocktail.xml" value="0.25513196480938416" />
+        <entry key="app/src/main/res/layout/fragment_cocktail.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_cocktail_bottom_sheet.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.19037199124726478" />
         <entry key="app/src/main/res/layout/fragment_overview.xml" value="0.375" />

@@ -132,6 +132,11 @@ class CocktailFragment : Fragment(), SearchView.OnQueryTextListener {
 
         }
     }
+//
+//    private fun searchApiData(searchQuery: String) {
+//        showShimmerEffect()
+//        mainViewModel.getCocktailByName()
+//    }
 
     private fun loadDataFromCash() {
         lifecycleScope.launch {
@@ -144,19 +149,17 @@ class CocktailFragment : Fragment(), SearchView.OnQueryTextListener {
     }
 
     private fun showShimmerEffect() {
-        binding.recyclerView.showShimmer()
+        binding.shimmerFrameLayout.startShimmer()
+        binding.recyclerView.visibility = View.GONE
     }
 
     private fun hideShimmerEffect() {
-        binding.recyclerView.hideShimmer()
+        binding.shimmerFrameLayout.stopShimmer()
+        binding.recyclerView.visibility = View.VISIBLE
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
-
-
-
-
 }

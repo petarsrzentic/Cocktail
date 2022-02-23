@@ -29,6 +29,7 @@ class OverviewFragment : Fragment() {
         binding.titleTextview.text = myBundle?.strDrink
         binding.summeryTextView.text = myBundle?.strInstructions
 
+
         val listOfIngredients = ArrayList<String?>()
         listOfIngredients.add(myBundle?.strIngredient1)
         listOfIngredients.add(myBundle?.strIngredient2)
