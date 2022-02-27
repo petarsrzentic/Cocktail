@@ -55,6 +55,25 @@ class OverviewFragment : Fragment() {
         binding.Ingredient5.text = listOfIngredients[4] ?: ""
         binding.Ingredient6.text = listOfIngredients[5] ?: ""
 
+        if (binding.Ingredient1.text.isNullOrEmpty()) {
+            binding.Ingredient1.visibility = View.GONE
+        }
+        if (binding.Ingredient2.text.isNullOrEmpty()) {
+            binding.Ingredient2.visibility = View.GONE
+        }
+        if (binding.Ingredient3.text.isNullOrEmpty()) {
+            binding.Ingredient3.visibility = View.GONE
+        }
+        if (binding.Ingredient4.text.isNullOrEmpty()) {
+            binding.Ingredient4.visibility = View.GONE
+        }
+        if (binding.Ingredient5.text.isNullOrEmpty()) {
+            binding.Ingredient5.visibility = View.GONE
+        }
+        if (binding.Ingredient6.text.isNullOrEmpty()) {
+            binding.Ingredient6.visibility = View.GONE
+        }
+
         val listOfMeasure = ArrayList<String?>()
         listOfMeasure.add(myBundle?.strMeasure1)
         listOfMeasure.add(myBundle?.strMeasure2)
@@ -69,6 +88,25 @@ class OverviewFragment : Fragment() {
         binding.textViewMeasure4.text = listOfMeasure[3] ?: ""
         binding.textViewMeasure5.text = listOfMeasure[4] ?: ""
         binding.textViewMeasure6.text = listOfMeasure[5] ?: ""
+
+        if (binding.textViewMeasure1.text.isNullOrEmpty()) {
+            binding.textViewMeasure1.visibility = View.GONE
+        }
+        if (binding.textViewMeasure2.text.isNullOrEmpty()) {
+            binding.textViewMeasure2.visibility = View.GONE
+        }
+        if (binding.textViewMeasure3.text.isNullOrEmpty()) {
+            binding.textViewMeasure3.visibility = View.GONE
+        }
+        if (binding.textViewMeasure4.text.isNullOrEmpty()) {
+            binding.textViewMeasure4.visibility = View.GONE
+        }
+        if (binding.textViewMeasure5.text.isNullOrEmpty()) {
+            binding.textViewMeasure5.visibility = View.GONE
+        }
+        if (binding.textViewMeasure6.text.isNullOrEmpty()) {
+            binding.textViewMeasure6.visibility = View.GONE
+        }
 
         if (!binding.Ingredient1.text.isNullOrEmpty()){
             binding.textViewColon1.visibility = View.VISIBLE
