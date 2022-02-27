@@ -24,7 +24,7 @@ class CocktailViewModel @Inject constructor(
     var networkStatus = false
     var backOnline = false
 
-    val readCocktailType = dataStoreRepository.readCocktailType
+    private val readCocktailType = dataStoreRepository.readCocktailType
     var readBackOnline = dataStoreRepository.readBackOnline.asLiveData()
 
     fun saveCocktailType(cocktailType: String, cocktailTypeId: Int) =

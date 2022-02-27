@@ -51,7 +51,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
         android:fontFamily="@font/courgette"
         android:text="@string/title"
@@ -299,6 +299,7 @@
                 android:textColor="@color/detailsActivityCardTextView"
                 android:textSize="16sp"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/Ingredient5"
                 app:layout_constraintTop_toBottomOf="@+id/Ingredient5" />
 

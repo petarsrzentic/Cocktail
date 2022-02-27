@@ -15,7 +15,7 @@
         <entry key="app/src/main/res/layout/fragment_cocktail.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_cocktail_bottom_sheet.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.19037199124726478" />
-        <entry key="app/src/main/res/layout/fragment_overview.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/fragment_overview.xml" value="0.1" />
         <entry key="app/src/main/res/layout/placeholder_row_layout.xml" value="0.25" />
         <entry key="app/src/main/res/menu-v26/details_menu.xml" value="0.15520833333333334" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.28229166666666666" />
