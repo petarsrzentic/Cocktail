@@ -103,7 +103,7 @@ class DetailsActivity : AppCompatActivity() {
         val favoritesEntity = FavoritesEntity(savedCocktailId, args.result)
         mainViewModel.insertFavoriteCocktail(favoritesEntity)
         changeMenuItemColor(item, R.color.green)
-        showSnackBar("Cocktail saved!")
+        showSnackBar(getString(R.string.cocktail_saved))
         cocktailSaved = true
     }
 
@@ -111,7 +111,7 @@ class DetailsActivity : AppCompatActivity() {
         val favoritesEntity = FavoritesEntity(savedCocktailId, args.result)
         mainViewModel.deleteFavoriteCocktail(favoritesEntity)
         changeMenuItemColor(item, R.color.white)
-        showSnackBar("Removed from Favorites")
+        showSnackBar(getString(R.string.removed_from_favorites))
         cocktailSaved = false
     }
 

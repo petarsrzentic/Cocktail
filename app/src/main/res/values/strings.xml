@@ -3,7 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="cocktail_fragment" translatable="false">Cocktails</string>
-    <string name="favorite_fragment" translatable="false">Favorites </string>
+    <string name="favorite_fragment">Favorites </string>
     <string name="cocktail_type" translatable="false">Cocktail Type</string>
     <string name="apply" translatable="false">Apply</string>
     <string name="popular">Popular</string>
@@ -41,4 +41,8 @@
     <string name="image_of_favorite_cocktail" translatable="false">Image of favorite cocktail</string>
     <string name="image_of_cocktail" translatable="false">Image of cocktail</string>
     <string name="colon" translatable="false">:</string>
+    <string name="cocktail_saved">Cocktail saved!</string>
+    <string name="removed_from_favorites">Removed from Favorites</string>
+    <string name="cocktail_selected">cocktail selected</string>
+    <string name="cocktails_selected">cocktails selected</string>
 </resources>

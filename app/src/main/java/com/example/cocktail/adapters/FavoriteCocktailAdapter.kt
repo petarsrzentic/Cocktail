@@ -1,5 +1,6 @@
 package com.example.cocktail.adapters
 
+import android.content.Context
 import android.view.*
 import android.widget.TextView
 import androidx.core.content.ContextCompat
@@ -26,6 +27,7 @@ class FavoriteCocktailAdapter(
     //this variable use to set title in contextualActionMode
     private lateinit var mActionMode: ActionMode
 
+    private lateinit var context: Context
     private lateinit var rootView: View
     private var selectedCocktails = arrayListOf<FavoritesEntity>()
     private var myViewHolders = arrayListOf<MyViewHolder>()
@@ -121,10 +123,10 @@ class FavoriteCocktailAdapter(
                 multiSelection = false
             }
             1 -> {
-                mActionMode.title = "${selectedCocktails.size} cocktail selected"
+                mActionMode.title = "${selectedCocktails.size} ${requireActivity.applicationContext.getString(R.string.cocktail_selected)}"
             }
             else -> {
-                mActionMode.title = "${selectedCocktails.size} cocktails selected"
+                mActionMode.title = "${selectedCocktails.size} ${requireActivity.applicationContext.getString(R.string.cocktails_selected)}"
             }
         }
     }
