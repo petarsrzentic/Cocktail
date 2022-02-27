@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import coil.load
 import com.example.cocktail.databinding.FragmentOverviewBinding
 import com.example.cocktail.models.Drink
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class OverviewFragment : Fragment() {
@@ -27,7 +29,13 @@ class OverviewFragment : Fragment() {
 
         binding.mainImageView.load(myBundle?.strDrinkThumb)
         binding.titleTextview.text = myBundle?.strDrink
-        binding.summeryTextView.text = myBundle?.strInstructions
+        // change language EN and DE
+        binding.summeryTextView.text = if (Locale.getDefault().language.equals("de")) {
+            myBundle?.strInstructionsDE
+        } else {
+            myBundle?.strInstructions
+        }
+
 
 
         val listOfIngredients = ArrayList<String?>()

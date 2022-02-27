@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cocktails</string>
+    <string name="popular">Populär</string>
+    <string name="latest">Neueste</string>
+    <string name="alcoholic">Alkoholisch</string>
+    <string name="ordinary">Normal</string>
+    <string name="glass">Glas</string>
+    <string name="random">Zufällig</string>
+    <string name="recent">Neueste</string>
+    <string name="no_internet_connection">Keine Internetverbindung</string>
+    <string name="search">Suche</string>
+    <string name="title">Titel</string>
+    <string name="ingredients">Zutaten</string>
+    <string name="save_to_favorites">In den Favoriten speichern</string>
+    <string name="no_favorite_cocktails">Keine Lieblingscocktails</string>
+    <string name="instructions_" translatable="false">Anweisungen</string>
+    <string name="ingredients_">Zutaten</string>
+</resources>

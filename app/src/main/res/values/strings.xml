@@ -1,11 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Cocktails</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="cocktail_fragment">Cocktails</string>
-    <string name="favorite_fragment">Favorites </string>
-    <string name="cocktail_type">Cocktail Type</string>
-    <string name="apply">Apply</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+    <string name="cocktail_fragment" translatable="false">Cocktails</string>
+    <string name="favorite_fragment" translatable="false">Favorites </string>
+    <string name="cocktail_type" translatable="false">Cocktail Type</string>
+    <string name="apply" translatable="false">Apply</string>
     <string name="popular">Popular</string>
     <string name="latest">Latest</string>
     <string name="alcoholic">Alcoholic</string>
@@ -14,31 +14,31 @@
     <string name="random">Random</string>
     <string name="recent">Recent</string>
     <string name="no_internet_connection">No Internet Connection</string>
-    <string name="todo">TODO</string>
+    <string name="todo" translatable="false">TODO</string>
     <string name="search">Search</string>
     <string name="title">Title</string>
-    <string name="textview">TextView</string>
+    <string name="textview" translatable="false">TextView</string>
     <string name="ingredients">Ingredients</string>
     <string name="ingredients_">Ingredients:</string>
-    <string name="ingredient1" tools:ignore="Typos">Ingredient1</string>
-    <string name="ingredient2">Ingredient2</string>
-    <string name="ingredient3">Ingredient3</string>
-    <string name="ingredient4">Ingredient4</string>
-    <string name="ingredient5">Ingredient5</string>
-    <string name="ingredient6">Ingredient6</string>
+    <string name="ingredient1" tools:ignore="Typos" translatable="false">Ingredient1</string>
+    <string name="ingredient2" translatable="false">Ingredient2</string>
+    <string name="ingredient3" translatable="false">Ingredient3</string>
+    <string name="ingredient4" translatable="false">Ingredient4</string>
+    <string name="ingredient5" translatable="false">Ingredient5</string>
+    <string name="ingredient6" translatable="false">Ingredient6</string>
     <string name="instructions_">Instructions:</string>
-    <string name="measure1" tools:ignore="Typos">measure1</string>
-    <string name="measure2">measure2</string>
-    <string name="measure3">measure3</string>
-    <string name="measure4">measure4</string>
-    <string name="measure5">measure5</string>
-    <string name="measure6">measure6</string>
+    <string name="measure1" tools:ignore="Typos" translatable="false">measure1</string>
+    <string name="measure2" translatable="false">measure2</string>
+    <string name="measure3" translatable="false">measure3</string>
+    <string name="measure4" translatable="false">measure4</string>
+    <string name="measure5" translatable="false">measure5</string>
+    <string name="measure6" translatable="false">measure6</string>
     <string name="save_to_favorites">Save to Favorites</string>
     <string name="no_favorite_cocktails">No Favorite Cocktails</string>
-    <string name="delete_favorite_menu">Delete Favorite Menu</string>
-    <string name="image_of_cocktail_when_there_is_no_data">Image of cocktail when there is no data</string>
-    <string name="image_of_mountains_when_there_is_no_data">Image of mountains when there is no data</string>
-    <string name="image_of_favorite_cocktail">Image of favorite cocktail</string>
-    <string name="image_of_cocktail">Image of cocktail</string>
-    <string name="colon">:</string>
+    <string name="delete_favorite_menu" translatable="false">Delete Favorite Menu</string>
+    <string name="image_of_cocktail_when_there_is_no_data" translatable="false">Image of cocktail when there is no data</string>
+    <string name="image_of_mountains_when_there_is_no_data" translatable="false">Image of mountains when there is no data</string>
+    <string name="image_of_favorite_cocktail" translatable="false">Image of favorite cocktail</string>
+    <string name="image_of_cocktail" translatable="false">Image of cocktail</string>
+    <string name="colon" translatable="false">:</string>
 </resources>
