@@ -14,6 +14,7 @@ import com.example.cocktail.adapters.PagerAdapter
 import com.example.cocktail.data.database.entities.FavoritesEntity
 import com.example.cocktail.databinding.ActivityDetailsBinding
 import com.example.cocktail.ui.fragments.overview.OverviewFragment
+import com.example.cocktail.util.Constants.Companion.PARCELABLE_KEY
 import com.example.cocktail.viewmodels.MainViewModel
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayoutMediator
@@ -46,7 +47,7 @@ class DetailsActivity : AppCompatActivity() {
         // here you can add titles for another fragments
 
         val resultBundle = Bundle()
-        resultBundle.putParcelable("drinkBundle", args.result)
+        resultBundle.putParcelable(PARCELABLE_KEY, args.result)
 
         val pagerAdapter = PagerAdapter(
             resultBundle,

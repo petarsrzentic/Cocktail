@@ -13,7 +13,7 @@
     <string name="title">Titel</string>
     <string name="ingredients">Zutaten</string>
     <string name="save_to_favorites">In den Favoriten speichern</string>
-    <string name="no_favorite_cocktails">Keine Lieblingscocktails</string>
+    <string name="no_favorite_cocktails">Keine Favoriten Cocktails</string>
     <string name="instructions_" translatable="false">Anleitung</string>
     <string name="ingredients_">Zutaten</string>
     <string name="favorite_fragment">Favoriten</string>
@@ -21,4 +21,5 @@
     <string name="removed_from_favorites">Aus Favoriten entfernt</string>
     <string name="cocktail_selected">Cocktail markiert</string>
     <string name="cocktails_selected">Cocktails markiert</string>
+    <string name="cocktails_removed">Cocktail/s entfernt.</string>
 </resources>

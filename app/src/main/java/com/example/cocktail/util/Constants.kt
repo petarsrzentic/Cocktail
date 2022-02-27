@@ -22,6 +22,7 @@ class Constants {
         const val DATABASE_NAME = "cocktail_database"
         const val COCKTAILS_TABLE = "cocktails_table"
         const val FAVORITE_COCKTAIL_TABLE = "favorite_cocktail_table"
+        const val PARCELABLE_KEY = "drinkBundle"
 
     }
 }

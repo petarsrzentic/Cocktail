@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import coil.load
 import com.example.cocktail.databinding.FragmentOverviewBinding
 import com.example.cocktail.models.Drink
+import com.example.cocktail.util.Constants.Companion.PARCELABLE_KEY
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -25,7 +26,7 @@ class OverviewFragment : Fragment() {
 
         // this variable gets data from Bundle
         val args = arguments
-        val myBundle: Drink? = args?.getParcelable("drinkBundle")
+        val myBundle: Drink? = args?.getParcelable(PARCELABLE_KEY)
 
         binding.mainImageView.load(myBundle?.strDrinkThumb)
         binding.titleTextview.text = myBundle?.strDrink

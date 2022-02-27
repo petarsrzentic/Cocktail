@@ -27,7 +27,6 @@ class FavoriteCocktailAdapter(
     //this variable use to set title in contextualActionMode
     private lateinit var mActionMode: ActionMode
 
-    private lateinit var context: Context
     private lateinit var rootView: View
     private var selectedCocktails = arrayListOf<FavoritesEntity>()
     private var myViewHolders = arrayListOf<MyViewHolder>()
@@ -123,10 +122,12 @@ class FavoriteCocktailAdapter(
                 multiSelection = false
             }
             1 -> {
-                mActionMode.title = "${selectedCocktails.size} ${requireActivity.applicationContext.getString(R.string.cocktail_selected)}"
+                mActionMode.title =
+                    "${selectedCocktails.size} ${requireActivity.applicationContext.getString(R.string.cocktail_selected)}"
             }
             else -> {
-                mActionMode.title = "${selectedCocktails.size} ${requireActivity.applicationContext.getString(R.string.cocktails_selected)}"
+                mActionMode.title =
+                    "${selectedCocktails.size} ${requireActivity.applicationContext.getString(R.string.cocktails_selected)}"
             }
         }
     }
@@ -152,7 +153,7 @@ class FavoriteCocktailAdapter(
             selectedCocktails.forEach {
                 mainViewModel.deleteFavoriteCocktail(it)
             }
-            showSnackBar("${selectedCocktails.size} cocktail/s removed.")
+            showSnackBar("${selectedCocktails.size} ${requireActivity.applicationContext.getString(R.string.cocktails_removed)}")
             multiSelection = false
             selectedCocktails.clear()
             actionMode?.finish()

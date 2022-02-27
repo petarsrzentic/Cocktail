@@ -45,4 +45,5 @@
     <string name="removed_from_favorites">Removed from Favorites</string>
     <string name="cocktail_selected">cocktail selected</string>
     <string name="cocktails_selected">cocktails selected</string>
+    <string name="cocktails_removed">cocktail/s removed.</string>
 </resources>
