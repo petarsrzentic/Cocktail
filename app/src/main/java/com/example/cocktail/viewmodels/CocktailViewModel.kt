@@ -32,7 +32,7 @@ class CocktailViewModel @Inject constructor(
             dataStoreRepository.saveCocktailType(cocktailType, cocktailTypeId)
         }
 
-    fun saveBackOnline(backOnline: Boolean) =
+    private fun saveBackOnline(backOnline: Boolean) =
         viewModelScope.launch(Dispatchers.IO) {
             dataStoreRepository.saveBackOnline(backOnline)
         }
@@ -51,10 +51,6 @@ class CocktailViewModel @Inject constructor(
         return queries
 
     }
-
-//    fun applySearchQuery(searchQuery: String): HashMap<String, String> {
-//        val queries: HashMap<String, String> = HashMap()
-//    }
 
     fun showNetworkStatus() {
         if (!networkStatus) {

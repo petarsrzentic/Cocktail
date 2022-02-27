@@ -18,5 +18,10 @@ class Constants {
         const val PREFERENCES_COCKTAIL_TYPE_ID = "cocktailTypeId"
         const val PREFERENCES_BACK_ONLINE = "backOnline"
 
+        //Room database
+        const val DATABASE_NAME = "cocktail_database"
+        const val COCKTAILS_TABLE = "cocktails_table"
+        const val FAVORITE_COCKTAIL_TABLE = "favorite_cocktail_table"
+
     }
 }

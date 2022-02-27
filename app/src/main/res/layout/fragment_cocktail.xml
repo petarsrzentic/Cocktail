@@ -33,13 +33,21 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <include layout="@layout/placeholder_row_layout" />
+                <include
+                    layout="@layout/placeholder_row_layout"
+                    android:visibility="visible" />
 
-                <include layout="@layout/placeholder_row_layout" />
+                <include
+                    layout="@layout/placeholder_row_layout"
+                    android:visibility="visible" />
 
-                <include layout="@layout/placeholder_row_layout" />
+                <include
+                    layout="@layout/placeholder_row_layout"
+                    android:visibility="visible" />
 
-                <include layout="@layout/placeholder_row_layout" />
+                <include
+                    layout="@layout/placeholder_row_layout"
+                    android:visibility="visible" />
 
             </LinearLayout>
 
