@@ -2,8 +2,8 @@ package com.example.cocktail.ui.fragments.cocktail
 
 import android.os.Bundle
 import android.view.*
-import android.widget.SearchView
 import android.widget.Toast
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
