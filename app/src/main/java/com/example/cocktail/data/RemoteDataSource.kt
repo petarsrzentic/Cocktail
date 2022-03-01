@@ -9,7 +9,11 @@ class RemoteDataSource @Inject constructor(
     private val cocktailApi: CocktailApi
 ) {
     suspend fun getSearchCocktails(queries: Map<String, String>): Response<Cocktails> {
-        return cocktailApi.getSearchCocktails(queries)
+        return cocktailApi.getCocktails(queries)
+    }
+
+    suspend fun searchCocktails(searchQuery: Map<String, String>): Response<Cocktails> {
+        return cocktailApi.searchCocktails(searchQuery)
     }
 
 }

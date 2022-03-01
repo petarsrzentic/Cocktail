@@ -9,7 +9,8 @@ class Constants {
 
         // API Query keys
 
-        const val API_GET_SEARCH_COCKTAIL = "/api/json/v2/$API_KEY/search.php?s"
+        const val API_GET_COCKTAIL = "/api/json/v2/$API_KEY/search.php?s"
+        const val API_SEARCH_COCKTAIL = "/api/json/v2/$API_KEY/search.php?s"
 
         // Bottom sheet and preferences
         const val DEFAULT_COCKTAIL = "search"

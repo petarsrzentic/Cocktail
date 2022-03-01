@@ -52,6 +52,12 @@ class CocktailViewModel @Inject constructor(
 
     }
 
+    fun applySearchQueries(searchQuery: String): HashMap<String, String> {
+        val queries: HashMap<String, String> = HashMap()
+        queries["s"] = searchQuery
+        return queries
+    }
+
     fun showNetworkStatus() {
         if (!networkStatus) {
             Toast.makeText(getApplication(), "No Internet Connection", Toast.LENGTH_SHORT).show()

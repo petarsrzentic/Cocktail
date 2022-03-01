@@ -85,7 +85,10 @@ class CocktailFragment : Fragment(), SearchView.OnQueryTextListener {
         searchView?.setOnQueryTextListener(this)
     }
 
-    override fun onQueryTextSubmit(p0: String?): Boolean {
+    override fun onQueryTextSubmit(query: String?): Boolean {
+        if (query != null) {
+            searchApiData(query)
+        }
         return true
     }
 
@@ -130,6 +133,34 @@ class CocktailFragment : Fragment(), SearchView.OnQueryTextListener {
             }
 
         }
+    }
+
+    private fun searchApiData(searchQuery: String) {
+        showShimmerEffect()
+        mainViewModel.getCocktailByName(cocktailViewModel.applySearchQueries(searchQuery))
+        mainViewModel.searchCocktailResponse.observe(viewLifecycleOwner) {response ->
+            when (response) {
+                is NetworkResult.Success -> {
+                    hideShimmerEffect()
+                    val searchResponse = response.data
+                    searchResponse?.let { mAdapter.setData(it) }
+                }
+                is NetworkResult.Error -> {
+                    hideShimmerEffect()
+                    loadDataFromCash()
+                    Toast.makeText(
+                        requireContext(),
+                        response.message.toString(),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+                is NetworkResult.Loading -> {
+                    showShimmerEffect()
+                }
+            }
+
+        }
+
     }
 
     private fun loadDataFromCash() {
