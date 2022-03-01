@@ -27,10 +27,6 @@ class CocktailViewModel @Inject constructor(
     private val readCocktailType = dataStoreRepository.readCocktailType
     var readBackOnline = dataStoreRepository.readBackOnline.asLiveData()
 
-    fun saveCocktailType(cocktailType: String, cocktailTypeId: Int) =
-        viewModelScope.launch {
-            dataStoreRepository.saveCocktailType(cocktailType, cocktailTypeId)
-        }
 
     private fun saveBackOnline(backOnline: Boolean) =
         viewModelScope.launch(Dispatchers.IO) {
