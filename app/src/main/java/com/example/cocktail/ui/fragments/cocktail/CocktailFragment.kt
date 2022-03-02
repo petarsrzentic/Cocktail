@@ -163,7 +163,7 @@ class CocktailFragment : Fragment(), SearchView.OnQueryTextListener {
             }
 
         }
-
+        hideKeyboard()
     }
 
     private fun loadDataFromCash() {
