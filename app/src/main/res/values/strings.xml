@@ -46,4 +46,5 @@
     <string name="cocktail_selected">cocktail selected</string>
     <string name="cocktails_selected">cocktails selected</string>
     <string name="cocktails_removed">cocktail/s removed.</string>
+    <string name="sort">Sort</string>
 </resources>

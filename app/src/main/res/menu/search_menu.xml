@@ -3,6 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+<!--    <item android:id="@+id/sort_menu"-->
+<!--        android:icon="@drawable/ic_reorder"-->
+<!--        android:iconTint="@color/darker"-->
+<!--        android:title="@string/sort"-->
+<!--        app:actionViewClass="androidx.appcompat.widget.SearchView"-->
+<!--        app:showAsAction="ifRoom"-->
+<!--        tools:targetApi="o" />-->
+
     <item
         android:id="@+id/search_menu"
         android:icon="@drawable/ic_search"

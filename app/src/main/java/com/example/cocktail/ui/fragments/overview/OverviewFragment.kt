@@ -30,6 +30,7 @@ class OverviewFragment : Fragment() {
 
         binding.mainImageView.load(myBundle?.strDrinkThumb)
         binding.titleTextview.text = myBundle?.strDrink
+        binding.textViewGlass.text = myBundle?.strGlass
         // change language EN and DE
         binding.summeryTextView.text = if (Locale.getDefault().language.equals("de")) {
             myBundle?.strInstructionsDE

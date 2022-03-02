@@ -22,7 +22,7 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/rowCardView"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
+            android:layout_height="280dp"
             app:cardCornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,14 +43,22 @@
                     loadImageFromUrl="@{drink.strDrinkThumb}"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
                     android:contentDescription="@string/image_of_cocktail"
+                    android:scaleType="centerCrop"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:srcCompat="@tools:sample/avatars" />
+                <View
+                    android:id="@+id/view_transition_rowLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:background="@drawable/gradient_overlay"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <TextView
                     android:id="@+id/cocktail_textView"
@@ -58,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginBottom="40dp"
                     android:ellipsize="end"
                     android:fontFamily="@font/courgette"
                     android:maxLength="40"
@@ -70,13 +78,32 @@
                     android:text="@{drink.strDrink}"
                     android:textAlignment="textEnd"
                     android:textColor="@color/primaryTextColor"
-                    android:textSize="30sp"
+                    android:textSize="40sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="@+id/cocktail_imageView"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.935"
+                    app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toEndOf="@+id/cocktail_imageView"
                     app:layout_constraintStart_toStartOf="@+id/cocktail_imageView" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/allan"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:shadowColor="@color/shadowColor"
+                    android:text="@{drink.strAlcoholic}"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/cocktail_textView"
+                    app:layout_constraintHorizontal_bias="0.51"
+                    app:layout_constraintStart_toStartOf="@+id/cocktail_textView"
+                    app:layout_constraintTop_toBottomOf="@+id/cocktail_textView" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

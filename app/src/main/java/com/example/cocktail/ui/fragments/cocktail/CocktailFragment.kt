@@ -1,7 +1,9 @@
 package com.example.cocktail.ui.fragments.cocktail
 
+import android.content.Context
 import android.os.Bundle
 import android.view.*
+import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
@@ -75,6 +77,7 @@ class CocktailFragment : Fragment(), SearchView.OnQueryTextListener {
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         showShimmerEffect()
     }
+
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.search_menu, menu)
@@ -182,6 +185,11 @@ class CocktailFragment : Fragment(), SearchView.OnQueryTextListener {
         binding.shimmerFrameLayout.stopShimmer()
         binding.shimmerFrameLayout.visibility = View.GONE
         binding.recyclerView.visibility = View.VISIBLE
+    }
+
+    private fun hideKeyboard(){
+        val keyboard = requireActivity().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        keyboard.hideSoftInputFromWindow(view?.windowToken, 0)
     }
 
     override fun onDestroyView() {

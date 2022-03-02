@@ -22,4 +22,5 @@
     <string name="cocktail_selected">Cocktail markiert</string>
     <string name="cocktails_selected">Cocktails markiert</string>
     <string name="cocktails_removed">Cocktail/s entfernt.</string>
+    <string name="sort">Sort</string>
 </resources>
