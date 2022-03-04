@@ -23,7 +23,7 @@
     <color name="secondaryLightColor">#ffd87e</color>
     <color name="secondaryDarkColor">#c5771f</color>
 
-    <color name="primaryTextColor">@color/mediumGray</color>
+
     <color name="secondaryTextColor">#000000</color>
 
     <color name="white">#FFFFFF</color>
@@ -41,11 +41,12 @@
     <color name="backgroundColor">@color/dark</color>
     <color name="backgroundBottomColor">@color/darker</color>
     <color name="bottomIconColor">@color/colorPrimaryDark</color>
-    <color name="shadowColor">@color/secondaryDarkColor</color>
+    <color name="primaryTextColor">@color/mediumGray</color>
+    <color name="shadowColor">@color/darker</color>
 
     // Custom CardView style
     <color name="strokeColor">@color/mediumGray</color>
-    <color name="cardBackgroundColor">@color/yellow</color>
+    <color name="cardBackgroundColor">@color/colorPrimary</color>
     <color name="cardBackgroundLightColor">#10fcd24f</color>
     <color name="titleColor">@color/lightGray</color>
 
@@ -64,6 +65,6 @@
     //detailsActivity card
     <color name="detailsActivityCard">@color/darker</color>
     <color name="detailsActivityCardTextView">@color/lightGray</color>
-    <color name="detailsActivityMeasureTextColor">@color/lightMediumGray</color>
+    <color name="detailsActivityMeasureTextColor">@color/secondaryColor</color>
 
 </resources>
