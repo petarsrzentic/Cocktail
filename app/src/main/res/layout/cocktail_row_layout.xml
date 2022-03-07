@@ -6,14 +6,14 @@
     <data>
 
         <variable
-            name="drink"
+            name="drinkCocktail"
             type="com.example.cocktail.models.Drink" />
 
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cocktailRowLayout"
-        onCocktailClickListener="@{drink}"
+        onCocktailClickListener="@{drinkCocktail}"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -40,7 +40,7 @@
 
                 <ImageView
                     android:id="@+id/cocktail_imageView"
-                    loadImageFromUrl="@{drink.strDrinkThumb}"
+                    loadImageFromUrl="@{drinkCocktail.strDrinkThumb}"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:contentDescription="@string/image_of_cocktail"
@@ -75,7 +75,7 @@
                     android:paddingEnd="5dp"
                     android:shadowColor="@color/shadowColor"
                     android:shadowRadius="10"
-                    android:text="@{drink.strDrink}"
+                    android:text="@{drinkCocktail.strDrink}"
                     android:textAlignment="textStart"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="40sp"
@@ -95,7 +95,7 @@
                     android:paddingEnd="5dp"
                     android:shadowColor="@color/shadowColor"
                     android:shadowRadius="10"
-                    android:text="@{drink.strAlcoholic}"
+                    android:text="@{drinkCocktail.strAlcoholic}"
                     android:textAlignment="textStart"
                     android:textColor="@color/primaryTextColor"
                     android:textSize="16sp"
