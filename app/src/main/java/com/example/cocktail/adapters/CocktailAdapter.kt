@@ -18,7 +18,7 @@ class CocktailAdapter : RecyclerView.Adapter<CocktailAdapter.MyViewHolder>() {
 
         //update layout when there is change
         fun bind(drink: Drink) {
-            binding.drink = drink
+            binding.drinkCocktail = drink
             binding.executePendingBindings()
         }
 
