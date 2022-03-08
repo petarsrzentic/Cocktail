@@ -16,7 +16,9 @@
             android:defaultValue="false" />
         <action
             android:id="@+id/action_cocktailFragment_to_details"
-            app:destination="@id/details" />
+            app:destination="@id/details"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
@@ -25,7 +27,9 @@
         tools:layout="@layout/fragment_favorite" >
         <action
             android:id="@+id/action_favoriteFragment_to_details"
-            app:destination="@id/details" />
+            app:destination="@id/details"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
     </fragment>
     <activity
         android:id="@+id/details"
