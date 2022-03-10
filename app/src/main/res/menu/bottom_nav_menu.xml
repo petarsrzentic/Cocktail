@@ -9,4 +9,9 @@
         android:id="@+id/favoriteFragment"
         android:icon="@drawable/ic_heart"
         android:title="@string/favorite_fragment" />
+
+    <item
+        android:id="@+id/filterFragment"
+        android:icon="@drawable/ic_filter"
+        android:title="@string/filter" />
 </menu>

@@ -27,7 +27,8 @@ class MainActivity : AppCompatActivity() {
         val appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.cocktailFragment,
-                R.id.favoriteFragment
+                R.id.favoriteFragment,
+                R.id.filterFragment
             )
         )
         binding.bottomNavigationView.setupWithNavController(navController)

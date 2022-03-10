@@ -20,14 +20,14 @@
     <string name="textview" translatable="false">TextView</string>
     <string name="ingredients">Ingredients</string>
     <string name="ingredients_">Ingredients:</string>
-    <string name="ingredient1" tools:ignore="Typos" translatable="false">Ingredient1</string>
+    <string name="ingredient1" translatable="false" tools:ignore="Typos">Ingredient1</string>
     <string name="ingredient2" translatable="false">Ingredient2</string>
     <string name="ingredient3" translatable="false">Ingredient3</string>
     <string name="ingredient4" translatable="false">Ingredient4</string>
     <string name="ingredient5" translatable="false">Ingredient5</string>
     <string name="ingredient6" translatable="false">Ingredient6</string>
     <string name="instructions_">Instructions:</string>
-    <string name="measure1" tools:ignore="Typos" translatable="false">measure1</string>
+    <string name="measure1" translatable="false" tools:ignore="Typos">measure1</string>
     <string name="measure2" translatable="false">measure2</string>
     <string name="measure3" translatable="false">measure3</string>
     <string name="measure4" translatable="false">measure4</string>
@@ -47,4 +47,6 @@
     <string name="cocktails_selected">cocktails selected</string>
     <string name="cocktails_removed">cocktail/s removed.</string>
     <string name="sort">Sort</string>
+    <string name="filter">Filter</string>
+    <string name="non_alcoholic">Non Alcoholic</string>
 </resources>

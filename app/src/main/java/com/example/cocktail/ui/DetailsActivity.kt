@@ -13,6 +13,7 @@ import com.example.cocktail.R
 import com.example.cocktail.adapters.PagerAdapter
 import com.example.cocktail.data.database.entities.FavoritesEntity
 import com.example.cocktail.databinding.ActivityDetailsBinding
+import com.example.cocktail.ui.fragments.filter.FilterFragment
 import com.example.cocktail.ui.fragments.overview.OverviewFragment
 import com.example.cocktail.util.Constants.Companion.PARCELABLE_KEY
 import com.example.cocktail.viewmodels.MainViewModel
@@ -40,10 +41,12 @@ class DetailsActivity : AppCompatActivity() {
 
         val fragments = ArrayList<Fragment>()
         fragments.add(OverviewFragment())
+        fragments.add(FilterFragment())
         // here you can add more fragments
 
         val titles = ArrayList<String>()
         titles.add("Overview")
+        titles.add("Filter")
         // here you can add titles for another fragments
 
         val resultBundle = Bundle()

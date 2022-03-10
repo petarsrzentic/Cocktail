@@ -23,4 +23,6 @@
     <string name="cocktails_selected">Cocktails markiert</string>
     <string name="cocktails_removed">Cocktail/s entfernt.</string>
     <string name="sort">Sort</string>
+    <string name="filter">Filter</string>
+    <string name="non_alcoholic">Alkoholfrei</string>
 </resources>

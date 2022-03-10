@@ -40,4 +40,9 @@
             android:name="result"
             app:argType="com.example.cocktail.models.Drink" />
     </activity>
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.example.cocktail.ui.fragments.filter.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" />
 </navigation>
