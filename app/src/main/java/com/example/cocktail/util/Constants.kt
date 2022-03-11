@@ -11,9 +11,14 @@ class Constants {
 
         const val API_GET_COCKTAIL = "/api/json/v2/$API_KEY/search.php?s"
         const val API_SEARCH_COCKTAIL = "/api/json/v2/$API_KEY/search.php"
+        const val FILTER_COCKTAIL_BY_ALC = "/api/json/v2/$API_KEY/filter.php"
+        const val FILTER_COCKTAIL_POPULAR = "/api/json/v2/$API_KEY/popular.php"
+        const val FILTER_COCKTAIL_LATEST = "/api/json/v2/$API_KEY/latest.php"
 
         // Bottom sheet and preferences
         const val DEFAULT_COCKTAIL = "search"
+        const val POPULAR_COCKTAIL = "popular"
+        const val LATEST_COCKTAIL = "latest"
         const val PREFERENCE_NAME = "cocktail_preferences"
         const val PREFERENCES_COCKTAIL_TYPE = "cocktailType"
         const val PREFERENCES_COCKTAIL_TYPE_ID = "cocktailTypeId"

@@ -1,6 +1,5 @@
 package com.example.cocktail.adapters
 
-import android.content.Context
 import android.view.*
 import android.widget.TextView
 import androidx.core.content.ContextCompat

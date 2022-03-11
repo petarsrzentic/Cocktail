@@ -16,4 +16,16 @@ class RemoteDataSource @Inject constructor(
         return cocktailApi.searchCocktails(searchQuery)
     }
 
+    suspend fun filterCocktailByAlc(filterQuery: Map<String, String>): Response<Cocktails> {
+        return cocktailApi.filterCocktailByAlc(filterQuery)
+    }
+
+    suspend fun popularCocktail(filterQuery: Map<String, String>): Response<Cocktails> {
+        return cocktailApi.filterPopularCocktail(filterQuery)
+    }
+
+    suspend fun latestCocktail(latestQuery: Map<String, String>): Response<Cocktails> {
+        return cocktailApi.filterLatestCocktail(latestQuery)
+    }
+
 }

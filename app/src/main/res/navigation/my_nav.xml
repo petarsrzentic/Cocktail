@@ -43,6 +43,9 @@
     <fragment
         android:id="@+id/filterFragment"
         android:name="com.example.cocktail.ui.fragments.filter.FilterFragment"
-        android:label="fragment_filter"
-        tools:layout="@layout/fragment_filter" />
+        android:label="@string/filter"
+        tools:layout="@layout/fragment_filter" >
+
+    </fragment>
+
 </navigation>

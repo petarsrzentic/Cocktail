@@ -48,6 +48,9 @@ class MainViewModel @Inject constructor(
     /* Retrofit */
     var cocktailResponse: MutableLiveData<NetworkResult<Cocktails>> = MutableLiveData()
     val searchCocktailResponse: MutableLiveData<NetworkResult<Cocktails>> = MutableLiveData()
+    private val filterCocktailByAlcohol: MutableLiveData<NetworkResult<Cocktails>> = MutableLiveData()
+    private val popularCocktails: MutableLiveData<NetworkResult<Cocktails>> = MutableLiveData()
+    private val latestCocktail: MutableLiveData<NetworkResult<Cocktails>> = MutableLiveData()
 
     fun getCocktails(queries: Map<String, String>) = viewModelScope.launch {
         getCocktailsSafeCall(queries)
@@ -55,6 +58,18 @@ class MainViewModel @Inject constructor(
 
     fun getCocktailByName(searchQuery: Map<String, String>) = viewModelScope.launch {
         searchCocktailSafeCall(searchQuery)
+    }
+
+    fun filterCocktailByAlcohol(filterQuery: Map<String, String>) = viewModelScope.launch {
+        filterCocktailSafeCallByAlc(filterQuery)
+    }
+
+    fun getPopularCocktail(queries: Map<String, String>) = viewModelScope.launch {
+        popularCocktailSafeCall(queries)
+    }
+
+    fun getLatestCocktail(latestQueries: Map<String, String>) = viewModelScope.launch {
+        latestCocktailSafeCall(latestQueries)
     }
 
 
@@ -89,6 +104,51 @@ class MainViewModel @Inject constructor(
                 val response = repository.remote.searchCocktails(searchQuery)
                 searchCocktailResponse.value = handleCocktailResponse(response)
 
+            } catch (e: Exception) {
+                searchCocktailResponse.value = NetworkResult.Error("Cocktails not found!")
+            }
+        } else {
+            searchCocktailResponse.value = NetworkResult.Error("No Internet Connection")
+        }
+    }
+
+    private suspend fun filterCocktailSafeCallByAlc(filterQuery: Map<String, String>) {
+        filterCocktailByAlcohol.value = NetworkResult.Loading()
+
+        if (hasInternetConnection()) {
+            try {
+                val response = repository.remote.filterCocktailByAlc(filterQuery)
+                searchCocktailResponse.value = handleCocktailResponse(response)
+            } catch (e: Exception) {
+                searchCocktailResponse.value = NetworkResult.Error("Cocktails not found!")
+            }
+        } else {
+            searchCocktailResponse.value = NetworkResult.Error("No Internet Connection")
+        }
+    }
+
+    private suspend fun popularCocktailSafeCall(queries: Map<String, String>) {
+        popularCocktails.value = NetworkResult.Loading()
+
+        if (hasInternetConnection()) {
+            try {
+                val response = repository.remote.popularCocktail(queries)
+                searchCocktailResponse.value = handleCocktailResponse(response)
+            } catch (e: Exception) {
+                searchCocktailResponse.value = NetworkResult.Error("Cocktails not found!")
+            }
+        } else {
+            searchCocktailResponse.value = NetworkResult.Error("No Internet Connection")
+        }
+    }
+
+    private suspend fun latestCocktailSafeCall(latestQueries: Map<String, String>) {
+        latestCocktail.value = NetworkResult.Loading()
+
+        if (hasInternetConnection()) {
+            try {
+                val response = repository.remote.latestCocktail(latestQueries)
+                searchCocktailResponse.value = handleCocktailResponse(response)
             } catch (e: Exception) {
                 searchCocktailResponse.value = NetworkResult.Error("Cocktails not found!")
             }

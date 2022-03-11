@@ -7,6 +7,8 @@ import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.example.cocktail.data.DataStoreRepository
 import com.example.cocktail.util.Constants.Companion.DEFAULT_COCKTAIL
+import com.example.cocktail.util.Constants.Companion.LATEST_COCKTAIL
+import com.example.cocktail.util.Constants.Companion.POPULAR_COCKTAIL
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
@@ -20,6 +22,8 @@ class CocktailViewModel @Inject constructor(
 ) : AndroidViewModel(application) {
 
     private var cocktailType = DEFAULT_COCKTAIL
+    private var popularCocktail = POPULAR_COCKTAIL
+    private var latestCocktail = LATEST_COCKTAIL
 
     var networkStatus = false
     var backOnline = false
@@ -51,6 +55,26 @@ class CocktailViewModel @Inject constructor(
     fun applySearchQueries(searchQuery: String): HashMap<String, String> {
         val queries: HashMap<String, String> = HashMap()
         queries["s"] = searchQuery
+        return queries
+    }
+
+    fun filterByAlcQueries(filterQuery: String): HashMap<String, String> {
+        val queries: HashMap<String, String> = HashMap()
+        queries["a"] = filterQuery
+        return queries
+    }
+
+    fun applyPopularCocktails(): HashMap<String, String> {
+        val queries: HashMap<String, String> = HashMap()
+        queries[POPULAR_COCKTAIL] = popularCocktail
+
+        return queries
+    }
+
+    fun applyLatestCocktails(): HashMap<String, String> {
+        val queries: HashMap<String, String> = HashMap()
+        queries[LATEST_COCKTAIL] = latestCocktail
+
         return queries
     }
 
