@@ -6,6 +6,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.FragmentActivity
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cocktail.R
 import com.example.cocktail.data.database.entities.FavoritesEntity
@@ -85,8 +86,27 @@ class FavoriteCocktailAdapter(
                 applySelection(holder, currentCocktail)
                 true
             }
-
         }
+    }
+
+    val simpleCallback = object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
+        override fun onMove(
+            recyclerView: RecyclerView,
+            viewHolder: RecyclerView.ViewHolder,
+            target: RecyclerView.ViewHolder
+        ): Boolean {
+            return false
+        }
+
+        override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+            val position = viewHolder.absoluteAdapterPosition
+            selectedCocktails.apply {
+                remove(favoriteCocktails[position])
+                mainViewModel.deleteFavoriteCocktail(favoriteCocktails[position])
+                notifyItemRemoved(position)
+            }
+        }
+
     }
 
     private fun saveItemStateOnScroll(currentCocktail: FavoritesEntity, holder: MyViewHolder) {

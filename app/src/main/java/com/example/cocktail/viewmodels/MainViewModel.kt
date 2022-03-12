@@ -73,6 +73,8 @@ class MainViewModel @Inject constructor(
     }
 
 
+
+
     private suspend fun getCocktailsSafeCall(queries: Map<String, String>) {
         cocktailResponse.value = NetworkResult.Loading()
 
