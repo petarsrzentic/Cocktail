@@ -89,6 +89,7 @@ class FavoriteCocktailAdapter(
         }
     }
 
+    // Remove favorite cocktails by swiping to the left
     val simpleCallback = object : ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
         override fun onMove(
             recyclerView: RecyclerView,
@@ -97,13 +98,11 @@ class FavoriteCocktailAdapter(
         ): Boolean {
             return false
         }
-
         override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
             val position = viewHolder.absoluteAdapterPosition
             selectedCocktails.apply {
                 remove(favoriteCocktails[position])
                 mainViewModel.deleteFavoriteCocktail(favoriteCocktails[position])
-                notifyItemRemoved(position)
             }
         }
 
